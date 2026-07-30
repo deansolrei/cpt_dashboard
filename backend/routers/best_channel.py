@@ -210,7 +210,31 @@ def get_best_channel(
             "show_default": True,
         }
 
+    # Display order for CPT codes on a claim:
+    #   1) Primary evaluation/session codes (only one per appointment) - always first
+    #   2) Add-on psychotherapy codes - always second
+    #   3) 90785 (interactive complexity add-on) - always last
+    #   4) Anything else not in the lists above - falls in the middle
+    PRIMARY_CODES = {"99214", "99215", "99204", "99205", "98002", "98003", "98006", "98007"}
+    ADDON_CODES = {"90833", "90836", "90838"}
+    LAST_CODES = {"90785"}
+
+    def _cpt_sort_key(cpt_code):
+        if cpt_code in PRIMARY_CODES:
+            return (0, cpt_code)
+        if cpt_code in ADDON_CODES:
+            return (1, cpt_code)
+        if cpt_code in LAST_CODES:
+            return (3, cpt_code)
+        return (2, cpt_code)
+
+    rows = sorted(rows, key=lambda r: _cpt_sort_key(r["cpt_code"]))
+
+    CHANNELS = ["Clinic Submit", "Headway", "Alma", "Grow Therapy"]
     cpt_results, channel_votes = [], {}
+    channel_totals = {c: 0 for c in CHANNELS}  # int, not 0.0 -- rates are Decimal (NUMERIC columns via psycopg2), and Decimal + float raises TypeError
+    channel_covers_all_cpts = {c: True for c in CHANNELS}
+
     for row in rows:
         rates = {
             "Clinic Submit": row["clinic_rate"],
@@ -234,12 +258,29 @@ def get_best_channel(
             "best_rate":       available.get(best),
             "clinic_is_best":  best == "Clinic Submit",
         })
-    overall_best = max(channel_votes, key=channel_votes.get) if channel_votes else None
+        # Running dollar total per channel across every CPT code on this claim.
+        # A channel only counts as a candidate for "best overall" if it has a
+        # payable rate for EVERY code being billed -- a channel missing a rate
+        # for even one code on the claim can't actually take the whole claim,
+        # so it shouldn't win on the strength of a single high-paying line.
+        for c in CHANNELS:
+            if rates[c] is None:
+                channel_covers_all_cpts[c] = False
+            else:
+                channel_totals[c] += rates[c]
+
+    channel_totals = {
+        c: round(channel_totals[c], 2)
+        for c in CHANNELS
+        if channel_covers_all_cpts[c]
+    }
+    overall_best = max(channel_totals, key=channel_totals.get) if channel_totals else None
     return {
         "canonical_payer":      canonical,
         "state":               state_upper,
         "cpt_results":         cpt_results,
         "overall_best_channel": overall_best,
+        "channel_totals":       channel_totals,
         "channel_vote_counts":  channel_votes,
         "mapped":              True,
         "raw_carrier":         carrier,
