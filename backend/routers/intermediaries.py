@@ -249,10 +249,21 @@ channel_cpts AS (
     ]) AS cpt_code
 ),
 all_combos AS (
+    -- BUGFIX 2026-08: this branch previously had no state filter at all, so
+    -- ANY (payer_name, cpt_code) combo that existed for ANY state — even one
+    -- with zero intermediary_rates rows for the state actually being
+    -- queried — became a candidate row here. Downstream, that ghost combo
+    -- gets LEFT JOINed against the correctly state-scoped alma/headway/
+    -- grow/sbh CTEs (which find nothing for it), but it still surfaces as a
+    -- row in the API response — e.g. querying state=CO could return a row
+    -- labeled "Anthem BCBS Maine" even though that payer has no CO data at
+    -- all. Adding ir.state here scopes the candidate list to the state
+    -- actually being requested, matching every other CTE below.
     SELECT DISTINCT ir.payer_name, ir.cpt_code
     FROM   intermediary_rates ir
     WHERE  ir.payer_name IS NOT NULL
       AND  ir.cpt_code IN (SELECT cpt_code FROM channel_cpts)
+      AND  ir.state = %(state)s
       AND  (%(provider_filter)s IS NULL OR ir.provider IS NULL OR ir.provider = %(provider_filter)s)
     UNION
     SELECT DISTINCT p.payer_name, fsl.cpt_code
@@ -282,7 +293,7 @@ headway AS (
       AND  NOT (%(provider_filter)s IS NOT NULL
                 AND ir.provider IS NOT NULL
                 AND ir.provider != %(provider_filter)s)
-    ORDER BY ir.payer_name, ir.cpt_code, ir.allowed_amount DESC
+    ORDER BY ir.payer_name, ir.cpt_code, ir.updated_at DESC, ir.allowed_amount DESC
 ),
 alma AS (
     SELECT DISTINCT ON (ir.payer_name, ir.cpt_code)
@@ -302,7 +313,7 @@ alma AS (
       AND  NOT (%(provider_filter)s IS NOT NULL
                 AND ir.provider IS NOT NULL
                 AND ir.provider != %(provider_filter)s)
-    ORDER BY ir.payer_name, ir.cpt_code, ir.allowed_amount DESC
+    ORDER BY ir.payer_name, ir.cpt_code, ir.updated_at DESC, ir.allowed_amount DESC
 ),
 grow AS (
     SELECT DISTINCT ON (ir.payer_name, ir.cpt_code)
@@ -322,7 +333,7 @@ grow AS (
       AND  NOT (%(provider_filter)s IS NOT NULL
                 AND ir.provider IS NOT NULL
                 AND ir.provider != %(provider_filter)s)
-    ORDER BY ir.payer_name, ir.cpt_code, ir.allowed_amount DESC
+    ORDER BY ir.payer_name, ir.cpt_code, ir.updated_at DESC, ir.allowed_amount DESC
 ),
 sbh AS (
     SELECT DISTINCT ON (ir.payer_name, ir.cpt_code)
@@ -343,7 +354,7 @@ sbh AS (
             (ir.provider IS NULL OR ir.provider = %(provider_filter)s)
             AND NOT (ir.provider IS NOT NULL AND ir.provider != %(provider_filter)s)
           )
-    ORDER BY ir.payer_name, ir.cpt_code, ir.allowed_amount DESC
+    ORDER BY ir.payer_name, ir.cpt_code, ir.updated_at DESC, ir.allowed_amount DESC
 ),
 combined AS (
     SELECT

@@ -36,6 +36,8 @@ secrets.json
 config.local.*
 .secrets/
 *service_account*.json
+*.bak*
+intermediary_rates_backup_*.sql
 
 # Database
 *.sqlite

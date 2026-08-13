@@ -12,11 +12,13 @@ Then open: http://localhost:8000/docs
 
 import os
 from fastapi import FastAPI
+from backend.security import public_access_control
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from backend.routers import payers, contracts, fee_schedules, dashboard, letters, intermediaries
+from backend.routers import sync_rates
 from backend.routers import sheets_sync
 from backend.routers import medicare_import
 from backend.routers import best_channel
@@ -48,6 +50,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.middleware("http")(public_access_control)
+
 # Register routers
 app.include_router(payers.router)
 app.include_router(contracts.router)
@@ -55,12 +59,9 @@ app.include_router(fee_schedules.router)
 app.include_router(dashboard.router)
 app.include_router(letters.router)
 app.include_router(intermediaries.router)
+app.include_router(sync_rates.router)
 app.include_router(sheets_sync.router)
 app.include_router(medicare_import.router)
-app.include_router(best_channel.router)
-app.include_router(best_channel.router)
-app.include_router(medicare_import.router)
-app.include_router(best_channel.router)
 app.include_router(best_channel.router)
 
 
