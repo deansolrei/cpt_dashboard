@@ -65,7 +65,7 @@ BCBS_BY_STATE = {
 }
 
 # Map CRB provID to CPT Dashboard provider tag
-PROV_MAP = {"jodene": "JJ", "katie": "KR", "lori": "LK", "megan": ""}
+PROV_MAP = {"jodene": "JJ", "katie": "KR", "lori": "LK"}
 
 
 def _resolve_carrier(carrier_name, state):

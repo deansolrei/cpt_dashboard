@@ -23,7 +23,6 @@ INSERT INTO provider_entities (legal_name, npi_number, entity_type, tax_id, acti
     ('Solrei Behavioral Health, Inc.', '1003521006', 'NPI2', '921227672', TRUE,  'Group practice. Address: 9100 Conroy Windermere Rd, Windermere FL 34786'),
     ('Jodene Jensen, PMHNP-BC',        '1093433955', 'NPI1', '921227672', TRUE,  'Psychiatric Mental Health Nurse Practitioner'),
     ('Katherine Robins, PMHNP-BC',     '1831127117', 'NPI1', '921227672', TRUE,  'Psychiatric Mental Health Nurse Practitioner'),
-    ('Megan Ramirez, PMHNP-BC',        '1801895636', 'NPI1', '921227672', TRUE,  'Psychiatric Mental Health Nurse Practitioner'),
     ('Lori Kistler, PMHNP-BC',         '1376234641', 'NPI1', '921227672', TRUE,  'Psychiatric Mental Health Nurse Practitioner')
 ON CONFLICT DO NOTHING;
 
