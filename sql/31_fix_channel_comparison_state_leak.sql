@@ -1,22 +1,32 @@
--- 21_fix_channel_all_payers.sql
--- Fix: v_channel_comparison was invisible to payers that have a direct
--- contract but no intermediary (Headway / Alma / Grow Therapy) rates.
+-- 31_fix_channel_comparison_state_leak.sql
+-- Fix: v_channel_comparison's all_combos CTE pulled candidate
+-- (payer_name, cpt_code) pairs from intermediary_rates with NO state
+-- filter, so a payer with rates for ANY state became a candidate row for
+-- EVERY state's query. Once joined against the (correctly state-scoped)
+-- headway/alma/grow CTEs, most of these ghost rows come back all-NULL and
+-- read as "No Data" — but the underlying leak is real, is the same bug
+-- independently found and fixed in backend/routers/intermediaries.py's
+-- inline CHANNEL_COMPARISON_SQL (2026-08), and is worth closing here too
+-- since this view backs /api/channel-comparison/summary and any other
+-- future caller.
 --
--- Root cause: the all_combos CTE was driven solely by intermediary_rates.
--- If a payer like Wellmark Iowa has no rows in intermediary_rates, it
--- never enters the view — direct_rate stays NULL and the payer is absent.
+-- Symptom this closes: querying one state (e.g. Colorado) could surface a
+-- payer that has zero intermediary_rates rows for that state at all (e.g.
+-- "Anthem BCBS Maine" showing up under a Colorado query).
 --
--- Fix: expand all_combos to UNION direct contract payers with intermediary
--- payers. Payers appear whether they are on intermediaries, direct, or both.
+-- Fix: add "AND state = <active locality>" to the intermediary_rates half
+-- of the all_combos UNION. The fee_schedule_lines half is untouched — that
+-- table has no state column, so it isn't state-scoped by design (direct/
+-- SBH contract rates aren't state-specific in this schema).
 --
--- Run: psql solrei_cpt -f 21_fix_channel_all_payers.sql
+-- Run:
+--   psql solrei_cpt -f sql/31_fix_channel_comparison_state_leak.sql
 
-SELECT '=== Rebuilding v_channel_comparison — all direct-contract payers included ===' AS info;
+SELECT '=== Fixing v_channel_comparison all_combos state leak ===' AS info;
 
 CREATE OR REPLACE VIEW v_channel_comparison AS
 WITH
 
--- Direct rates: prefer NPI1 (individual provider), fall back to NPI2.
 direct_rates AS (
     SELECT DISTINCT ON (p.payer_name, fsl.cpt_code)
         p.payer_name,
@@ -36,19 +46,21 @@ direct_rates AS (
         fsl.allowed_amount DESC
 ),
 
--- Medicare: one row per CPT
 medicare AS (
-    SELECT cpt_code, MAX(allowed_amount) AS medicare_allowed
+    SELECT cpt_code, allowed_amount AS medicare_allowed
     FROM   benchmark_fee_schedule
-    WHERE  source_name = 'Medicare 2026'
-    GROUP  BY cpt_code
+    WHERE  source_name    = 'Medicare 2026'
+      AND  effective_year = 2026
+      AND  locality       = COALESCE(
+                                NULLIF(current_setting('app.benchmark_locality', TRUE), ''),
+                                'FL'
+                            )
 ),
 
--- All unique (payer_name, cpt_code) pairs — from BOTH intermediaries AND
--- direct contracts. This ensures every payer with a direct contract appears
--- in the Channel Comparison, even if they have no intermediary rates.
 all_combos AS (
-    -- Payers appearing in intermediary rate data (Headway / Alma / Grow)
+    -- FIXED: scoped to the active state, matching every CTE below. Was
+    -- previously unfiltered, letting any payer with rates for ANY state
+    -- become a candidate row for the state actually being queried.
     SELECT DISTINCT payer_name, cpt_code
     FROM   intermediary_rates
     WHERE  payer_name IS NOT NULL
@@ -57,10 +69,10 @@ all_combos AS (
                '99204','99205','90785',
                '98002','98003','98006','98007'
            )
-
+      AND  state = COALESCE(NULLIF(current_setting('app.benchmark_locality', TRUE), ''), 'FL')
     UNION
-
-    -- Payers with direct contracts (so direct-only payers are included)
+    -- Unchanged — fee_schedule_lines/contracts has no state column, direct/
+    -- SBH contract rates aren't state-specific in this schema.
     SELECT DISTINCT p.payer_name, fsl.cpt_code
     FROM fee_schedule_lines fsl
     JOIN contracts         c  ON fsl.contract_id       = c.contract_id
@@ -75,9 +87,6 @@ all_combos AS (
            )
 ),
 
--- Map each payer_name (as used in all_combos) to the canonical DB payer_name.
--- For intermediary-sourced names, use intermediary_payer_map; otherwise fall
--- back to a case-insensitive match against the payers table.
 name_resolved AS (
     SELECT DISTINCT ON (ac.payer_name)
         ac.payer_name  AS intermediary_payer_name,
@@ -92,34 +101,46 @@ name_resolved AS (
     ORDER BY ac.payer_name, ipm.direct_payer_name NULLS LAST
 ),
 
--- Headway: one row per (payer_name, cpt_code)
 headway AS (
-    SELECT ir.payer_name, ir.cpt_code, MAX(ir.allowed_amount) AS headway_rate
+    SELECT DISTINCT ON (ir.payer_name, ir.cpt_code)
+        ir.payer_name,
+        ir.cpt_code,
+        ir.allowed_amount  AS headway_rate,
+        ir.updated_at      AS headway_updated_at
     FROM   intermediary_rates ir
     JOIN   intermediaries i ON ir.intermediary_id = i.intermediary_id
     WHERE  i.name = 'Headway' AND i.active = TRUE
       AND  (ir.effective_date IS NULL OR ir.effective_date <= CURRENT_DATE)
-    GROUP  BY ir.payer_name, ir.cpt_code
+      AND  ir.state = COALESCE(NULLIF(current_setting('app.benchmark_locality', TRUE), ''), 'FL')
+    ORDER BY ir.payer_name, ir.cpt_code, ir.updated_at DESC, ir.allowed_amount DESC
 ),
 
--- Alma: one row per (payer_name, cpt_code)
 alma AS (
-    SELECT ir.payer_name, ir.cpt_code, MAX(ir.allowed_amount) AS alma_rate
+    SELECT DISTINCT ON (ir.payer_name, ir.cpt_code)
+        ir.payer_name,
+        ir.cpt_code,
+        ir.allowed_amount  AS alma_rate,
+        ir.updated_at      AS alma_updated_at
     FROM   intermediary_rates ir
     JOIN   intermediaries i ON ir.intermediary_id = i.intermediary_id
     WHERE  i.name = 'Alma' AND i.active = TRUE
       AND  (ir.effective_date IS NULL OR ir.effective_date <= CURRENT_DATE)
-    GROUP  BY ir.payer_name, ir.cpt_code
+      AND  ir.state = COALESCE(NULLIF(current_setting('app.benchmark_locality', TRUE), ''), 'FL')
+    ORDER BY ir.payer_name, ir.cpt_code, ir.updated_at DESC, ir.allowed_amount DESC
 ),
 
--- Grow Therapy: one row per (payer_name, cpt_code)
 grow AS (
-    SELECT ir.payer_name, ir.cpt_code, MAX(ir.allowed_amount) AS grow_rate
+    SELECT DISTINCT ON (ir.payer_name, ir.cpt_code)
+        ir.payer_name,
+        ir.cpt_code,
+        ir.allowed_amount  AS grow_rate,
+        ir.updated_at      AS grow_updated_at
     FROM   intermediary_rates ir
     JOIN   intermediaries i ON ir.intermediary_id = i.intermediary_id
     WHERE  i.name = 'Grow Therapy' AND i.active = TRUE
       AND  (ir.effective_date IS NULL OR ir.effective_date <= CURRENT_DATE)
-    GROUP  BY ir.payer_name, ir.cpt_code
+      AND  ir.state = COALESCE(NULLIF(current_setting('app.benchmark_locality', TRUE), ''), 'FL')
+    ORDER BY ir.payer_name, ir.cpt_code, ir.updated_at DESC, ir.allowed_amount DESC
 ),
 
 combined AS (
@@ -135,8 +156,16 @@ combined AS (
              THEN ROUND((dr.direct_rate / m.medicare_allowed * 100)::numeric, 1)
         END AS direct_pct_of_medicare,
         h.headway_rate,
+        h.headway_updated_at,
         a.alma_rate,
+        a.alma_updated_at,
         g.grow_rate,
+        g.grow_updated_at,
+        LEAST(
+            h.headway_updated_at,
+            a.alma_updated_at,
+            g.grow_updated_at
+        ) AS oldest_intermediary_update,
         CASE
             WHEN GREATEST(
                 COALESCE(dr.direct_rate,  0),
@@ -167,20 +196,20 @@ combined AS (
 SELECT DISTINCT ON (payer_name, cpt_code)
     payer_id, payer_name, cpt_code, short_description, category,
     medicare_allowed, direct_rate, direct_pct_of_medicare,
-    headway_rate, alma_rate, grow_rate,
+    headway_rate, headway_updated_at,
+    alma_rate,    alma_updated_at,
+    grow_rate,    grow_updated_at,
+    oldest_intermediary_update,
     best_channel_type, has_direct_contract
 FROM combined
 ORDER BY payer_name, cpt_code;
 
--- ── Verify ────────────────────────────────────────────────────────────────────
-SELECT
-    payer_name,
-    COUNT(DISTINCT cpt_code)                                     AS cpt_codes,
-    COUNT(*) FILTER (WHERE direct_rate   IS NOT NULL)            AS has_direct,
-    COUNT(*) FILTER (WHERE headway_rate  IS NOT NULL)            AS has_headway,
-    COUNT(*) FILTER (WHERE alma_rate     IS NOT NULL)            AS has_alma,
-    COUNT(*) FILTER (WHERE grow_rate     IS NOT NULL)            AS has_grow
+SELECT 'v_channel_comparison state-leak fix applied ✓' AS info;
+
+-- ── Verify: no more payer_name showing for a state with zero real rows ──
+-- (adjust the locality below to spot-check any state)
+SET LOCAL app.benchmark_locality = 'CO';
+SELECT payer_name, cpt_code, headway_rate, alma_rate, grow_rate, direct_rate
 FROM v_channel_comparison
-GROUP BY payer_name
-ORDER BY payer_name;
--- Wellmark Iowa should now appear with has_direct > 0
+WHERE payer_name = 'Anthem BCBS Maine';
+-- Expect: 0 rows (Anthem BCBS Maine has no Colorado data at all)
