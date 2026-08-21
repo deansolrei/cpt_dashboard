@@ -12,15 +12,23 @@ CARRIER_MAP = {
     "aetna choice": "Aetna",
     "aetna (headway)": "Aetna",
     "ambetter": "Ambetter",
-    "anthem blue cross and blue shield colorado": "Anthem BCBS Colorado",
-    "anthem blue cross and blue shield nevada": "Anthem BCBS Nevada",
-    "anthem blue cross and blue shield florida": "Florida Blue",
-    "anthem blue cross and blue shield connecticut": "Anthem BCBS Connecticut",
-    "anthem blue cross and blue shield maine": "Anthem BCBS Maine",
-    "anthem blue cross and blue shield new hampshire": "Anthem BCBS New Hampshire",
-    "anthem": "Anthem BCBS Colorado",
-    "bcbs - anthem": "Anthem BCBS Colorado",
-    "carefirst": "Anthem BCBS Colorado",
+    # FIXED (2026-08-21): rewritten to match the actual "Anthem BCBS ___"
+    # abbreviated format SolBoard sends (confirmed against real appointment
+    # data) — the old keys were spelled out ("anthem blue cross and blue
+    # shield colorado") and never matched anything in practice. Every one
+    # of these six was silently falling through to the bare "anthem"
+    # catch-all below, which hardcoded Colorado regardless of the patient's
+    # actual plan. That catch-all (plus "bcbs - anthem" and "carefirst",
+    # which is a different company entirely, unrelated to Anthem) has been
+    # removed — an unrecognized Anthem-family carrier now correctly falls
+    # through to "not mapped" instead of guessing.
+    "anthem bcbs colorado": "Anthem BCBS Colorado",
+    "anthem bcbs nevada": "Anthem BCBS Nevada",
+    "anthem bcbs florida": "Florida Blue",
+    "anthem bcbs connecticut": "Anthem BCBS Connecticut",
+    "anthem bcbs maine": "Anthem BCBS Maine",
+    "anthem bcbs new hampshire": "Anthem BCBS New Hampshire",
+    "anthem bcbs new york": "Anthem BCBS New York",
     "blue cross blue shield of arizona": "BCBS Arizona",
     "blue cross blue shield of massachusetts": "BCBS Massachusetts",
     "blue cross and blue shield of minnesota": "BCBS Minnesota",
@@ -69,9 +77,11 @@ PROV_MAP = {"jodene": "JJ", "katie": "KR", "lori": "LK"}
 
 
 def _resolve_carrier(carrier_name, state):
-    if not carrier_name: return None
+    if not carrier_name:
+        return None
     n = carrier_name.lower().strip()
-    if "cash" in n or "self pay" in n or "self-pay" in n: return None
+    if "cash" in n or "self pay" in n or "self-pay" in n:
+        return None
     if n in CARRIER_MAP:
         r = CARRIER_MAP[n]
         return BCBS_BY_STATE.get(state.upper(), "Blue Cross") if r is None else r
@@ -215,7 +225,8 @@ def get_best_channel(
     #   2) Add-on psychotherapy codes - always second
     #   3) 90785 (interactive complexity add-on) - always last
     #   4) Anything else not in the lists above - falls in the middle
-    PRIMARY_CODES = {"99214", "99215", "99204", "99205", "98002", "98003", "98006", "98007"}
+    PRIMARY_CODES = {"99214", "99215", "99204",
+                     "99205", "98002", "98003", "98006", "98007"}
     ADDON_CODES = {"90833", "90836", "90838"}
     LAST_CODES = {"90785"}
 
@@ -232,7 +243,8 @@ def get_best_channel(
 
     CHANNELS = ["Clinic Submit", "Headway", "Alma", "Grow Therapy"]
     cpt_results, channel_votes = [], {}
-    channel_totals = {c: 0 for c in CHANNELS}  # int, not 0.0 -- rates are Decimal (NUMERIC columns via psycopg2), and Decimal + float raises TypeError
+    # int, not 0.0 -- rates are Decimal (NUMERIC columns via psycopg2), and Decimal + float raises TypeError
+    channel_totals = {c: 0 for c in CHANNELS}
     channel_covers_all_cpts = {c: True for c in CHANNELS}
 
     for row in rows:
@@ -244,8 +256,10 @@ def get_best_channel(
         }
         available = {k: v for k, v in rates.items() if v is not None}
         best = max(available, key=available.get) if available else None
-        if best: channel_votes[best] = channel_votes.get(best, 0) + 1
-        pct = round(row["clinic_rate"] / row["medicare_rate"] * 100, 1) if row["clinic_rate"] and row["medicare_rate"] else None
+        if best:
+            channel_votes[best] = channel_votes.get(best, 0) + 1
+        pct = round(row["clinic_rate"] / row["medicare_rate"] * 100,
+                    1) if row["clinic_rate"] and row["medicare_rate"] else None
         cpt_results.append({
             "cpt_code":        row["cpt_code"],
             "clinic_rate":     row["clinic_rate"],
@@ -274,7 +288,8 @@ def get_best_channel(
         for c in CHANNELS
         if channel_covers_all_cpts[c]
     }
-    overall_best = max(channel_totals, key=channel_totals.get) if channel_totals else None
+    overall_best = max(
+        channel_totals, key=channel_totals.get) if channel_totals else None
     return {
         "canonical_payer":      canonical,
         "state":               state_upper,
