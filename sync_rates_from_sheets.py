@@ -58,6 +58,13 @@ SLAVE_SHEET_ID  = "1eSuZtC9gm0vwNftf-sl8GrCTPMExWZ8-ifo8mLRZlpY"   # "Reimbursem
 
 INTERMEDIARY_RANGE = "intermediary_rates!A1:G5000"
 MEDICARE_RANGE     = "Medicare!A1:H2000"
+# ChannelPlanOverrides (2026-08-21): read directly from the MASTER sheet,
+# not the SLAVE mirror -- unlike intermediary_rates, this table is small
+# (a handful of confirmed cases, not thousands of rate rows) and doesn't
+# need the SLAVE sheet's read-optimized mirroring, so there's no Apps
+# Script change required to support it. Same pattern already used for the
+# Medicare tab, which also reads straight from Master.
+OVERRIDE_RANGE = "ChannelPlanOverrides!A1:E200"
 
 API_BASE = "http://localhost:8000/api"
 
@@ -197,6 +204,69 @@ def push_intermediary_rates(csv_bytes: bytes, dry_run: bool) -> dict:
     return resp.json()
 
 
+# ── Channel plan overrides (2026-08-21) ────────────────────────
+# See sql/32_channel_plan_overrides.sql for the full explanation. Same
+# build/push pattern as intermediary rates above, just a much smaller,
+# separate sheet tab and table -- this only grows when a real cross-
+# channel plan substitution is confirmed, not populated speculatively.
+
+def build_override_csv(rows: list[list[str]]) -> tuple[bytes, int]:
+    """
+    Convert the raw Master Sheet ChannelPlanOverrides rows into the exact
+    CSV format /api/channel-overrides/import expects:
+      home_plan, channel, effective_plan, notes, active
+    """
+    if not rows:
+        # Not an error -- an empty tab (or one that's just the header row)
+        # simply means no overrides are confirmed yet, which is the
+        # expected starting state. Return zero rows rather than raising.
+        return b"home_plan,channel,effective_plan,notes,active\n", 0
+
+    header = [h.strip().lower() for h in rows[0]]
+    expected = ["home_plan", "channel", "effective_plan", "notes", "active"]
+    if header[:len(expected)] != expected:
+        raise ValueError(
+            f"ChannelPlanOverrides header changed — expected {expected}, got {header}. "
+            "Sheet layout may have changed; update this script before proceeding."
+        )
+
+    out = io.StringIO()
+    writer = csv.writer(out)
+    writer.writerow(expected)
+
+    row_count = 0
+    for raw_row in rows[1:]:
+        if not raw_row or not (raw_row[0] or "").strip():
+            continue
+        padded = raw_row + [""] * (5 - len(raw_row))
+        home_plan, channel, effective_plan, notes, active = padded[:5]
+
+        home_plan = home_plan.strip()
+        channel = channel.strip()
+        effective_plan = effective_plan.strip()
+        if not home_plan or not channel or not effective_plan:
+            continue
+
+        writer.writerow([home_plan, channel, effective_plan, notes.strip(), active.strip() or "TRUE"])
+        row_count += 1
+
+    return out.getvalue().encode("utf-8"), row_count
+
+
+def push_override_rows(csv_bytes: bytes, dry_run: bool) -> dict:
+    if dry_run:
+        log.info("[dry-run] Would POST ChannelPlanOverrides CSV (%d bytes)", len(csv_bytes))
+        return {"status": "dry-run"}
+
+    resp = requests.post(
+        f"{API_BASE}/channel-overrides/import",
+        files={"file": ("channel_overrides_sync.csv", csv_bytes, "text/csv")},
+        timeout=60,
+    )
+    resp.raise_for_status()
+    return resp.json()
+
+
 # ── Medicare benchmark rates ────────────────────────────────────
 
 def parse_medicare_by_state(rows: list[list[str]]) -> dict[str, list[dict]]:
@@ -293,6 +363,7 @@ def main():
                          help="Fetch and parse but do not POST anything")
     parser.add_argument("--skip-intermediary", action="store_true")
     parser.add_argument("--skip-medicare", action="store_true")
+    parser.add_argument("--skip-overrides", action="store_true")
     parser.add_argument("--year", type=int, default=date.today().year,
                          help="Medicare effective year (default: current year)")
     parser.add_argument("--log-file", default=str(DEFAULT_LOG_PATH))
@@ -333,6 +404,26 @@ def main():
                 exit_code = 1
         except Exception as e:
             log.error("Medicare rate sync failed: %s", e)
+            exit_code = 1
+
+    if not args.skip_overrides:
+        try:
+            log.info("Fetching Master ChannelPlanOverrides tab...")
+            rows = fetch_values(service, MASTER_SHEET_ID, OVERRIDE_RANGE)
+            csv_bytes, row_count = build_override_csv(rows)
+            log.info("Parsed %d channel plan override row(s)", row_count)
+            result = push_override_rows(csv_bytes, args.dry_run)
+            log.info("Channel override import result: %s", result)
+            if result.get("errors"):
+                exit_code = 1
+        except Exception as e:
+            # Deliberately non-fatal to the OTHER two sync steps above, same
+            # as they're non-fatal to each other -- and expected to fail
+            # loudly the first time, before the ChannelPlanOverrides tab
+            # exists on the Master Sheet at all (a missing-tab range request
+            # returns a Sheets API error, not an empty result). Once the tab
+            # exists this becomes a normal isolated failure like the others.
+            log.error("Channel override sync failed: %s", e)
             exit_code = 1
 
     log.info("=== Rate sync finished (exit code %d) ===", exit_code)
