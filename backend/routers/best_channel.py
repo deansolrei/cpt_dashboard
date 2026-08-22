@@ -172,6 +172,19 @@ CARRIER_MAP = {
     "uhc": "Optum/UHC/Oscar",
     "surest": "Optum/UHC/Oscar",
     "medica - united": "Optum/UHC/Oscar",
+    # NEW (2026-08-22, round 5): Golden Rule and Sierra Health and Life are
+    # both real UnitedHealth-family subsidiaries (Sierra historically
+    # operated in Nevada). Tested against the live resolver first —
+    # everything else Dean listed this round (United Health Care, Optum
+    # Behavioral Health, United Medical Resources, Oscar Health, Oxford
+    # Health Plans, and their short forms) already resolved correctly via
+    # the existing shorter "united"/"optum"/"oscar"/"oxford" prefix
+    # entries — only these five were genuinely unmapped.
+    "golden rule insurance company": "Optum/UHC/Oscar",
+    "golden rule": "Optum/UHC/Oscar",
+    "sierra health and life": "Optum/UHC/Oscar",
+    "sierra health": "Optum/UHC/Oscar",
+    "sierra": "Optum/UHC/Oscar",
     "carelon": "Carelon Behavioral Health",
     "beacon": "Carelon Behavioral Health",
 }
