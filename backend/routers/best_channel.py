@@ -49,6 +49,25 @@ CARRIER_MAP = {
     "anthem bcbs new york": "Anthem BCBS New York",
     "anthem blue cross and blue shield new york": "Anthem BCBS New York",
     "anthem blue cross blue shield - new york": "Anthem BCBS New York",  # Tebra's own inconsistent variant (Dean flagged this one himself)
+    # NEW (2026-08-21, round 3): the rest of Dean's originally-listed Tebra
+    # canonical names that had no dedicated entry — each was silently
+    # falling through to the generic "bcbs"/"blue shield" substring match
+    # further down, which resolves via the PATIENT's state of residence
+    # (BCBS_BY_STATE), not the plan's own identity. Real, broad gap for
+    # any patient carrying an out-of-state plan — caught via Dean's "Tim
+    # Jones lives in FL, plan is BCBS Michigan" scenario, where this was
+    # silently resolving to Florida Blue instead of BCBS Michigan.
+    "anthem bcbs california": "Anthem BCBS California",
+    "anthem bcbs indiana": "Anthem BCBS Indiana",
+    "anthem bcbs virginia": "Anthem BCBS Virginia",
+    "anthem blue cross california": "Anthem Blue Cross California",
+    "bcbs arizona": "BCBS Arizona",
+    "bcbs carefirst": "BCBS CareFirst",
+    "bcbs hawaii": "BCBS Hawaii",
+    "bcbs michigan": "BCBS Michigan",
+    "bcbs montana": "BCBS Montana",
+    "bcbs texas": "BCBS Texas",
+    "blue shield of california": "Blue Shield of California",
     "blue cross blue shield of arizona": "BCBS Arizona",
     "blue cross blue shield of massachusetts": "BCBS Massachusetts",
     "blue cross and blue shield of minnesota": "BCBS Minnesota",
@@ -99,12 +118,14 @@ CARRIER_MAP = {
 BCBS_BY_STATE = {
     "AK": "BCBS Massachusetts", "AZ": "BCBS Arizona", "CO": "Anthem BCBS Colorado",
     "CT": "Anthem BCBS Connecticut", "DC": "Blue Cross", "FL": "Florida Blue",
-    "HI": "Blue Cross", "ID": "Blue Cross", "IA": "Wellmark Iowa",
+    "HI": "BCBS Hawaii", "ID": "Blue Cross", "IA": "Wellmark Iowa",  # HI now specific, not generic (2026-08-21)
     "KS": "Blue Cross", "ME": "Anthem BCBS Maine", "MD": "Blue Cross",
-    "MN": "BCBS Minnesota", "MT": "Blue Cross", "NE": "Blue Cross",
+    "MI": "BCBS Michigan",  # NEW (2026-08-21) — was missing entirely, defaulted to hardcoded "Blue Cross"
+    "MN": "BCBS Minnesota", "MT": "BCBS Montana", "NE": "Blue Cross",  # MT now specific, not generic (2026-08-21)
     "NV": "Anthem BCBS Nevada", "NH": "Anthem BCBS New Hampshire",
     "NM": "BCBS Massachusetts", "ND": "Blue Cross", "OR": "Regence BCBS Oregon",
-    "SD": "Blue Cross", "UT": "Blue Cross", "VT": "Blue Cross",
+    "SD": "Blue Cross", "TX": "BCBS Texas",  # TX now specific, not generic (2026-08-21)
+    "UT": "Blue Cross", "VT": "Blue Cross",
     "WA": "Regence Blue Shield Washington", "WY": "Blue Cross",
 }
 
