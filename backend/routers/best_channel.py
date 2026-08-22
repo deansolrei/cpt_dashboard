@@ -12,15 +12,62 @@ CARRIER_MAP = {
     "aetna choice": "Aetna",
     "aetna (headway)": "Aetna",
     "ambetter": "Ambetter",
+    # FIXED (2026-08-21): rewritten to match the actual "Anthem BCBS ___"
+    # abbreviated format SolBoard sends (confirmed against real appointment
+    # data) — the old keys were spelled out ("anthem blue cross and blue
+    # shield colorado") and never matched anything in practice. Every one
+    # of these six was silently falling through to the bare "anthem"
+    # catch-all below, which hardcoded Colorado regardless of the patient's
+    # actual plan. That catch-all (plus "bcbs - anthem" and "carefirst",
+    # which is a different company entirely, unrelated to Anthem) has been
+    # removed — an unrecognized Anthem-family carrier now correctly falls
+    # through to "not mapped" instead of guessing.
+    #
+    # EXTENDED (2026-08-21, round 2): both the abbreviated AND the fully
+    # spelled-out "Anthem Blue Cross and Blue Shield ___" form are kept for
+    # every state below. Real input uses either — Headway's own naming
+    # convention is always spelled-out, and it also sneaks into Tebra
+    # inconsistently alongside the abbreviated form. Before this round, a
+    # spelled-out name fell through to the generic "blue cross and blue
+    # shield" substring match further down and silently returned the WRONG
+    # state's fallback — the exact same failure class as the original bug,
+    # just triggered by a different input string. Caught by testing every
+    # name from Headway's and Alma's actual naming conventions against the
+    # live resolver, not just the abbreviated forms this fix started with.
+    "anthem bcbs colorado": "Anthem BCBS Colorado",
     "anthem blue cross and blue shield colorado": "Anthem BCBS Colorado",
+    "anthem bcbs nevada": "Anthem BCBS Nevada",
     "anthem blue cross and blue shield nevada": "Anthem BCBS Nevada",
+    "anthem bcbs florida": "Florida Blue",
     "anthem blue cross and blue shield florida": "Florida Blue",
+    "anthem bcbs connecticut": "Anthem BCBS Connecticut",
     "anthem blue cross and blue shield connecticut": "Anthem BCBS Connecticut",
+    "anthem bcbs maine": "Anthem BCBS Maine",
     "anthem blue cross and blue shield maine": "Anthem BCBS Maine",
+    "anthem bcbs new hampshire": "Anthem BCBS New Hampshire",
     "anthem blue cross and blue shield new hampshire": "Anthem BCBS New Hampshire",
-    "anthem": "Anthem BCBS Colorado",
-    "bcbs - anthem": "Anthem BCBS Colorado",
-    "carefirst": "Anthem BCBS Colorado",
+    "anthem bcbs new york": "Anthem BCBS New York",
+    "anthem blue cross and blue shield new york": "Anthem BCBS New York",
+    "anthem blue cross blue shield - new york": "Anthem BCBS New York",  # Tebra's own inconsistent variant (Dean flagged this one himself)
+    # NEW (2026-08-21, round 3): the rest of Dean's originally-listed Tebra
+    # canonical names that had no dedicated entry — each was silently
+    # falling through to the generic "bcbs"/"blue shield" substring match
+    # further down, which resolves via the PATIENT's state of residence
+    # (BCBS_BY_STATE), not the plan's own identity. Real, broad gap for
+    # any patient carrying an out-of-state plan — caught via Dean's "Tim
+    # Jones lives in FL, plan is BCBS Michigan" scenario, where this was
+    # silently resolving to Florida Blue instead of BCBS Michigan.
+    "anthem bcbs california": "Anthem BCBS California",
+    "anthem bcbs indiana": "Anthem BCBS Indiana",
+    "anthem bcbs virginia": "Anthem BCBS Virginia",
+    "anthem blue cross california": "Anthem Blue Cross California",
+    "bcbs arizona": "BCBS Arizona",
+    "bcbs carefirst": "BCBS CareFirst",
+    "bcbs hawaii": "BCBS Hawaii",
+    "bcbs michigan": "BCBS Michigan",
+    "bcbs montana": "BCBS Montana",
+    "bcbs texas": "BCBS Texas",
+    "blue shield of california": "Blue Shield of California",
     "blue cross blue shield of arizona": "BCBS Arizona",
     "blue cross blue shield of massachusetts": "BCBS Massachusetts",
     "blue cross and blue shield of minnesota": "BCBS Minnesota",
@@ -29,11 +76,20 @@ CARRIER_MAP = {
     "florida blue": "Florida Blue",
     "blue cross and blue shield of florida": "Florida Blue",
     "independence blue cross": "Independence Blue Cross PA",
+    # NEW (2026-08-21): was falling through to the generic Blue Cross
+    # guess, same failure class as the Anthem entries above.
+    "horizon blue cross and blue shield of new jersey": "Horizon BCBS New Jersey",
+    "horizon bcbs new jersey": "Horizon BCBS New Jersey",
     "premera blue cross washington": "Premera Blue Cross Washington",
-    "regence bluecross blueShield of oregon": "Regence BCBS Oregon",
+    # FIXED (2026-08-21): these three keys had a stray uppercase "S" in
+    # "blueShield" that silently never matched anything, since input is
+    # always lowercased before comparison but these keys weren't. Every
+    # Washington Regence request was falling all the way through to
+    # "not mapped" — worse than a wrong guess, just silently no answer.
+    "regence bluecross blueshield of oregon": "Regence BCBS Oregon",
     "regence bluecross": "Regence BCBS Oregon",
-    "regence blueShield of washington": "Regence Blue Shield Washington",
-    "regence blueShield": "Regence Blue Shield Washington",
+    "regence blueshield of washington": "Regence Blue Shield Washington",
+    "regence blueshield": "Regence Blue Shield Washington",
     "regence group": "Regence BCBS Oregon",
     "blue cross blue shield": None,
     "blue cross and blue shield": None,
@@ -43,6 +99,13 @@ CARRIER_MAP = {
     "oscar": "Optum/UHC/Oscar",
     "oxford": "Optum/UHC/Oscar",
     "umr": "Optum/UHC/Oscar",
+    # NEW (2026-08-21): Alma's own bare naming for these three was
+    # completely unresolved before. Dean confirmed all six of Alma's Optum-
+    # family names (Optum, United, UnitedHealthcare, UMR, Oscar, Oxford)
+    # are one single rate, so these are safe to add as plain synonyms.
+    "optum": "Optum/UHC/Oscar",
+    "united": "Optum/UHC/Oscar",
+    "unitedhealthcare": "Optum/UHC/Oscar",
     "united healthcare": "Optum/UHC/Oscar",
     "united health": "Optum/UHC/Oscar",
     "uhc": "Optum/UHC/Oscar",
@@ -55,12 +118,14 @@ CARRIER_MAP = {
 BCBS_BY_STATE = {
     "AK": "BCBS Massachusetts", "AZ": "BCBS Arizona", "CO": "Anthem BCBS Colorado",
     "CT": "Anthem BCBS Connecticut", "DC": "Blue Cross", "FL": "Florida Blue",
-    "HI": "Blue Cross", "ID": "Blue Cross", "IA": "Wellmark Iowa",
+    "HI": "BCBS Hawaii", "ID": "Blue Cross", "IA": "Wellmark Iowa",  # HI now specific, not generic (2026-08-21)
     "KS": "Blue Cross", "ME": "Anthem BCBS Maine", "MD": "Blue Cross",
-    "MN": "BCBS Minnesota", "MT": "Blue Cross", "NE": "Blue Cross",
+    "MI": "BCBS Michigan",  # NEW (2026-08-21) — was missing entirely, defaulted to hardcoded "Blue Cross"
+    "MN": "BCBS Minnesota", "MT": "BCBS Montana", "NE": "Blue Cross",  # MT now specific, not generic (2026-08-21)
     "NV": "Anthem BCBS Nevada", "NH": "Anthem BCBS New Hampshire",
     "NM": "BCBS Massachusetts", "ND": "Blue Cross", "OR": "Regence BCBS Oregon",
-    "SD": "Blue Cross", "UT": "Blue Cross", "VT": "Blue Cross",
+    "SD": "Blue Cross", "TX": "BCBS Texas",  # TX now specific, not generic (2026-08-21)
+    "UT": "Blue Cross", "VT": "Blue Cross",
     "WA": "Regence Blue Shield Washington", "WY": "Blue Cross",
 }
 
@@ -69,9 +134,11 @@ PROV_MAP = {"jodene": "JJ", "katie": "KR", "lori": "LK"}
 
 
 def _resolve_carrier(carrier_name, state):
-    if not carrier_name: return None
+    if not carrier_name:
+        return None
     n = carrier_name.lower().strip()
-    if "cash" in n or "self pay" in n or "self-pay" in n: return None
+    if "cash" in n or "self pay" in n or "self-pay" in n:
+        return None
     if n in CARRIER_MAP:
         r = CARRIER_MAP[n]
         return BCBS_BY_STATE.get(state.upper(), "Blue Cross") if r is None else r
@@ -133,6 +200,32 @@ def get_best_channel(
     else:
         prov_filter = "AND (1=1 OR %s IS NULL)"  # always true, param ignored
 
+    # Per-channel plan overrides (2026-08-21) — see
+    # sql/32_channel_plan_overrides.sql. Some channels bill a patient's
+    # real plan under a DIFFERENT, separately-contracted plan due to
+    # interstate/network reciprocity (e.g. Alma has no direct NY Anthem
+    # contract, so it bills those patients under its Massachusetts BCBS
+    # contract instead) — a genuinely different rate card, not a spelling
+    # variant of the same one. This is NOT what CARRIER_MAP handles above;
+    # CARRIER_MAP already resolved `canonical` to one true plan name by
+    # this point, and this step runs strictly after that, only ever
+    # redirecting individual channels' lookups away from it. Absent any
+    # override row for this plan, every channel just uses `canonical`
+    # exactly as before this change — existing behavior is unaffected for
+    # the overwhelming majority of plans, which have no override at all.
+    with get_db() as cur:
+        cur.execute(
+            "SELECT channel, effective_plan FROM channel_plan_overrides "
+            "WHERE home_plan = %s AND active = TRUE",
+            (canonical,),
+        )
+        overrides_by_channel = {r["channel"]: r["effective_plan"] for r in cur.fetchall()}
+
+    payer_sbh = overrides_by_channel.get("SBH", canonical)
+    payer_headway = overrides_by_channel.get("Headway", canonical)
+    payer_alma = overrides_by_channel.get("Alma", canonical)
+    payer_grow = overrides_by_channel.get("Grow Therapy", canonical)
+
     with get_db() as cur:
         cur.execute(f"""
             WITH
@@ -184,10 +277,10 @@ def get_best_channel(
             WHERE COALESCE(s.cpt_code, h.cpt_code, a.cpt_code, g.cpt_code) = ANY(%s)
             ORDER BY cpt_code
         """, (
-            canonical, state_upper, prov_tag,  # sbh
-            canonical, state_upper, prov_tag,  # headway
-            canonical, state_upper, prov_tag,  # alma
-            canonical, state_upper, prov_tag,  # grow
+            payer_sbh, state_upper, prov_tag,      # sbh
+            payer_headway, state_upper, prov_tag,  # headway
+            payer_alma, state_upper, prov_tag,     # alma
+            payer_grow, state_upper, prov_tag,     # grow
             state_upper,                        # medicare
             cpt_list,
         ))
@@ -215,7 +308,8 @@ def get_best_channel(
     #   2) Add-on psychotherapy codes - always second
     #   3) 90785 (interactive complexity add-on) - always last
     #   4) Anything else not in the lists above - falls in the middle
-    PRIMARY_CODES = {"99214", "99215", "99204", "99205", "98002", "98003", "98006", "98007"}
+    PRIMARY_CODES = {"99214", "99215", "99204",
+                     "99205", "98002", "98003", "98006", "98007"}
     ADDON_CODES = {"90833", "90836", "90838"}
     LAST_CODES = {"90785"}
 
@@ -232,7 +326,8 @@ def get_best_channel(
 
     CHANNELS = ["Clinic Submit", "Headway", "Alma", "Grow Therapy"]
     cpt_results, channel_votes = [], {}
-    channel_totals = {c: 0 for c in CHANNELS}  # int, not 0.0 -- rates are Decimal (NUMERIC columns via psycopg2), and Decimal + float raises TypeError
+    # int, not 0.0 -- rates are Decimal (NUMERIC columns via psycopg2), and Decimal + float raises TypeError
+    channel_totals = {c: 0 for c in CHANNELS}
     channel_covers_all_cpts = {c: True for c in CHANNELS}
 
     for row in rows:
@@ -244,8 +339,10 @@ def get_best_channel(
         }
         available = {k: v for k, v in rates.items() if v is not None}
         best = max(available, key=available.get) if available else None
-        if best: channel_votes[best] = channel_votes.get(best, 0) + 1
-        pct = round(row["clinic_rate"] / row["medicare_rate"] * 100, 1) if row["clinic_rate"] and row["medicare_rate"] else None
+        if best:
+            channel_votes[best] = channel_votes.get(best, 0) + 1
+        pct = round(row["clinic_rate"] / row["medicare_rate"] * 100,
+                    1) if row["clinic_rate"] and row["medicare_rate"] else None
         cpt_results.append({
             "cpt_code":        row["cpt_code"],
             "clinic_rate":     row["clinic_rate"],
@@ -274,7 +371,8 @@ def get_best_channel(
         for c in CHANNELS
         if channel_covers_all_cpts[c]
     }
-    overall_best = max(channel_totals, key=channel_totals.get) if channel_totals else None
+    overall_best = max(
+        channel_totals, key=channel_totals.get) if channel_totals else None
     return {
         "canonical_payer":      canonical,
         "state":               state_upper,

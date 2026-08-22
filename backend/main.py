@@ -22,10 +22,7 @@ from backend.routers import sync_rates
 from backend.routers import sheets_sync
 from backend.routers import medicare_import
 from backend.routers import best_channel
-from backend.routers import best_channel
-from backend.routers import medicare_import
-from backend.routers import best_channel
-from backend.routers import best_channel
+from backend.routers import channel_overrides
 
 # Paths relative to this file
 _APP_ROOT      = os.path.dirname(os.path.dirname(__file__))
@@ -63,6 +60,7 @@ app.include_router(sync_rates.router)
 app.include_router(sheets_sync.router)
 app.include_router(medicare_import.router)
 app.include_router(best_channel.router)
+app.include_router(channel_overrides.router)
 
 
 # Serve static assets (logo, etc.) — mount AFTER routers so /api routes take priority

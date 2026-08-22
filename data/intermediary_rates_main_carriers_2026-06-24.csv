@@ -1,0 +1,846 @@
+intermediary_name,payer_name,cpt_code,state,allowed_amount,effective_date,notes
+Alma,Optum/UHC/Oscar,99214,AK,109.8,2026-06-01,MASTER updated Alma AK
+Headway,Optum/UHC/Oscar,99214,AK,113.71,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Optum/UHC/Oscar,99214,AK,80.17,2026-06-01,MASTER updated Grow Therapy AK
+Alma,Aetna,99214,AK,109.9,2026-06-01,MASTER updated Alma AK
+Headway,Aetna,99214,AK,109.0,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Aetna,99214,AK,77.26,2026-06-01,MASTER updated Grow Therapy AK
+Alma,Cigna,99214,AK,117.0,2026-06-01,MASTER updated Alma AK
+Headway,Cigna,99214,AK,86.0,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Cigna,99214,AK,78.53,2026-06-01,MASTER updated Grow Therapy AK
+Alma,BCBS - Massachusetts (virtual network),99214,AK,115.08,2026-06-01,MASTER updated Alma AK
+Alma,Optum/UHC/Oscar,99215,AK,166.55,2026-06-01,MASTER updated Alma AK
+Headway,Optum/UHC/Oscar,99215,AK,160.41,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Optum/UHC/Oscar,99215,AK,112.23,2026-06-01,MASTER updated Grow Therapy AK
+Alma,Aetna,99215,AK,109.9,2026-06-01,MASTER updated Alma AK
+Headway,Aetna,99215,AK,118.0,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Aetna,99215,AK,103.75,2026-06-01,MASTER updated Grow Therapy AK
+Alma,Cigna,99215,AK,156.0,2026-06-01,MASTER updated Alma AK
+Headway,Cigna,99215,AK,116.0,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Cigna,99215,AK,103.73,2026-06-01,MASTER updated Grow Therapy AK
+Alma,BCBS - Massachusetts (virtual network),99215,AK,161.5,2026-06-01,MASTER updated Alma AK
+Alma,Optum/UHC/Oscar,90833,AK,73.01,2026-06-01,MASTER updated Alma AK
+Headway,Optum/UHC/Oscar,90833,AK,62.46,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Optum/UHC/Oscar,90833,AK,47.46,2026-06-01,MASTER updated Grow Therapy AK
+Alma,Aetna,90833,AK,69.2,2026-06-01,MASTER updated Alma AK
+Headway,Aetna,90833,AK,71.0,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Aetna,90833,AK,50.37,2026-06-01,MASTER updated Grow Therapy AK
+Alma,Cigna,90833,AK,73.0,2026-06-01,MASTER updated Alma AK
+Headway,Cigna,90833,AK,53.0,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Cigna,90833,AK,47.47,2026-06-01,MASTER updated Grow Therapy AK
+Alma,BCBS - Massachusetts (virtual network),90833,AK,62.26,2026-06-01,MASTER updated Alma AK
+Alma,Optum/UHC/Oscar,90836,AK,100.42,2026-06-01,MASTER updated Alma AK
+Headway,Optum/UHC/Oscar,90836,AK,78.85,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Optum/UHC/Oscar,90836,AK,55.0,2026-06-01,MASTER updated Grow Therapy AK
+Alma,Aetna,90836,AK,110.57,2026-06-01,MASTER updated Alma AK
+Headway,Aetna,90836,AK,103.0,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Aetna,90836,AK,72.93,2026-06-01,MASTER updated Grow Therapy AK
+Alma,Cigna,90836,AK,91.0,2026-06-01,MASTER updated Alma AK
+Headway,Cigna,90836,AK,71.0,2026-06-01,MASTER updated Headway AK
+Grow Therapy,Cigna,90836,AK,58.02,2026-06-01,MASTER updated Grow Therapy AK
+Alma,BCBS - Massachusetts (virtual network),90836,AK,81.48,2026-06-01,MASTER updated Alma AK
+Alma,Optum/UHC/Oscar,90838,AK,131.87,2026-06-01,MASTER updated Alma AK
+Headway,Optum/UHC/Oscar,90838,AK,103.7,2026-06-01,MASTER updated Headway AK
+Alma,Aetna,90838,AK,130.1,2026-06-01,MASTER updated Alma AK
+Headway,Aetna,90838,AK,124.0,2026-06-01,MASTER updated Headway AK
+Alma,Cigna,90838,AK,124.0,2026-06-01,MASTER updated Alma AK
+Headway,Cigna,90838,AK,95.0,2026-06-01,MASTER updated Headway AK
+Alma,BCBS - Massachusetts (virtual network),90838,AK,104.1,2026-06-01,MASTER updated Alma AK
+Alma,Optum/UHC/Oscar,99214,AZ,118.8,2026-06-01,MASTER updated Alma AZ
+Headway,Optum/UHC/Oscar,99214,AZ,107.12,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Optum/UHC/Oscar,99214,AZ,82.38,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Aetna,99214,AZ,117.9,2026-06-01,MASTER updated Alma AZ
+Headway,Aetna,99214,AZ,113.0,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Aetna,99214,AZ,83.7,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Cigna,99214,AZ,117.0,2026-06-01,MASTER updated Alma AZ
+Headway,Cigna,99214,AZ,98.0,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Cigna,99214,AZ,87.1,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,BCBS - Massachusetts (virtual network),99214,AZ,115.08,2026-06-01,MASTER updated Alma AZ
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,AZ,60.96,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Optum/UHC/Oscar,99215,AZ,166.55,2026-06-01,MASTER updated Alma AZ
+Headway,Optum/UHC/Oscar,99215,AZ,151.51,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Optum/UHC/Oscar,99215,AZ,111.1,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Aetna,99215,AZ,117.9,2026-06-01,MASTER updated Alma AZ
+Headway,Aetna,99215,AZ,122.0,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Aetna,99215,AZ,112.39,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Cigna,99215,AZ,156.0,2026-06-01,MASTER updated Alma AZ
+Headway,Cigna,99215,AZ,132.0,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Cigna,99215,AZ,115.05,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,BCBS - Massachusetts (virtual network),99215,AZ,161.5,2026-06-01,MASTER updated Alma AZ
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,AZ,85.44,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Optum/UHC/Oscar,90833,AZ,74.01,2026-06-01,MASTER updated Alma AZ
+Headway,Optum/UHC/Oscar,90833,AZ,58.87,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Optum/UHC/Oscar,90833,AZ,52.02,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Aetna,90833,AZ,81.2,2026-06-01,MASTER updated Alma AZ
+Headway,Aetna,90833,AZ,73.0,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Aetna,90833,AZ,54.57,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Cigna,90833,AZ,73.0,2026-06-01,MASTER updated Alma AZ
+Headway,Cigna,90833,AZ,59.0,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Cigna,90833,AZ,52.65,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,BCBS - Massachusetts (virtual network),90833,AZ,62.26,2026-06-01,MASTER updated Alma AZ
+Grow Therapy,BCBS - Massachusetts (virtual network),90833,AZ,42.71,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Optum/UHC/Oscar,90836,AZ,101.42,2026-06-01,MASTER updated Alma AZ
+Headway,Optum/UHC/Oscar,90836,AZ,74.31,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Optum/UHC/Oscar,90836,AZ,65.68,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Aetna,90836,AZ,117.57,2026-06-01,MASTER updated Alma AZ
+Headway,Aetna,90836,AZ,107.0,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Aetna,90836,AZ,79.01,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Cigna,90836,AZ,91.0,2026-06-01,MASTER updated Alma AZ
+Headway,Cigna,90836,AZ,81.0,2026-06-01,MASTER updated Headway AZ
+Grow Therapy,Cigna,90836,AZ,64.35,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,BCBS - Massachusetts (virtual network),90836,AZ,81.48,2026-06-01,MASTER updated Alma AZ
+Grow Therapy,BCBS - Massachusetts (virtual network),90836,AZ,64.06,2026-06-01,MASTER updated Grow Therapy AZ
+Alma,Optum/UHC/Oscar,90838,AZ,139.87,2026-06-01,MASTER updated Alma AZ
+Headway,Optum/UHC/Oscar,90838,AZ,97.47,2026-06-01,MASTER updated Headway AZ
+Alma,Aetna,90838,AZ,138.1,2026-06-01,MASTER updated Alma AZ
+Headway,Aetna,90838,AZ,129.0,2026-06-01,MASTER updated Headway AZ
+Alma,Cigna,90838,AZ,124.0,2026-06-01,MASTER updated Alma AZ
+Headway,Cigna,90838,AZ,108.0,2026-06-01,MASTER updated Headway AZ
+Alma,BCBS - Massachusetts (virtual network),90838,AZ,104.1,2026-06-01,MASTER updated Alma AZ
+Alma,Optum/UHC/Oscar,99214,CO,118.8,2026-06-01,MASTER updated Alma CO
+Headway,Optum/UHC/Oscar,99214,CO,106.0,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Optum/UHC/Oscar,99214,CO,82.38,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Aetna,99214,CO,117.9,2026-06-01,MASTER updated Alma CO
+Headway,Aetna,99214,CO,117.9,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Aetna,99214,CO,83.7,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Cigna,99214,CO,117.9,2026-06-01,MASTER updated Alma CO
+Headway,Cigna,99214,CO,97.0,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Cigna,99214,CO,87.1,2026-06-01,MASTER updated Grow Therapy CO
+Alma,BCBS - Massachusetts (virtual network),99214,CO,104.9,2026-06-01,MASTER updated Alma CO
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,CO,72.93,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Optum/UHC/Oscar,99215,CO,166.55,2026-06-01,MASTER updated Alma CO
+Headway,Optum/UHC/Oscar,99215,CO,140.0,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Optum/UHC/Oscar,99215,CO,111.1,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Aetna,99215,CO,117.9,2026-06-01,MASTER updated Alma CO
+Headway,Aetna,99215,CO,129.48,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Aetna,99215,CO,112.39,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Cigna,99215,CO,156.0,2026-06-01,MASTER updated Alma CO
+Headway,Cigna,99215,CO,131.0,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Cigna,99215,CO,115.05,2026-06-01,MASTER updated Grow Therapy CO
+Alma,BCBS - Massachusetts (virtual network),99215,CO,147.68,2026-06-01,MASTER updated Alma CO
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,CO,102.67,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Optum/UHC/Oscar,90833,CO,74.01,2026-06-01,MASTER updated Alma CO
+Headway,Optum/UHC/Oscar,90833,CO,64.4,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Optum/UHC/Oscar,90833,CO,52.02,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Aetna,90833,CO,81.2,2026-06-01,MASTER updated Alma CO
+Headway,Aetna,90833,CO,88.46,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Aetna,90833,CO,54.57,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Cigna,90833,CO,73.0,2026-06-01,MASTER updated Alma CO
+Headway,Cigna,90833,CO,59.0,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Cigna,90833,CO,52.65,2026-06-01,MASTER updated Grow Therapy CO
+Alma,BCBS - Massachusetts (virtual network),90833,CO,58.85,2026-06-01,MASTER updated Alma CO
+Grow Therapy,BCBS - Massachusetts (virtual network),90833,CO,40.92,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Optum/UHC/Oscar,90836,CO,101.42,2026-06-01,MASTER updated Alma CO
+Headway,Optum/UHC/Oscar,90836,CO,76.16,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Optum/UHC/Oscar,90836,CO,65.58,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Aetna,90836,CO,117.57,2026-06-01,MASTER updated Alma CO
+Headway,Aetna,90836,CO,117.57,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Aetna,90836,CO,79.01,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Cigna,90836,CO,91.0,2026-06-01,MASTER updated Alma CO
+Headway,Cigna,90836,CO,80.0,2026-06-01,MASTER updated Headway CO
+Grow Therapy,Cigna,90836,CO,64.35,2026-06-01,MASTER updated Grow Therapy CO
+Alma,BCBS - Massachusetts (virtual network),90836,CO,74.39,2026-06-01,MASTER updated Alma CO
+Grow Therapy,BCBS - Massachusetts (virtual network),90836,CO,51.71,2026-06-01,MASTER updated Grow Therapy CO
+Alma,Optum/UHC/Oscar,90838,CO,139.87,2026-06-01,MASTER updated Alma CO
+Headway,Optum/UHC/Oscar,90838,CO,106.0,2026-06-01,MASTER updated Headway CO
+Alma,Aetna,90838,CO,138.1,2026-06-01,MASTER updated Alma CO
+Headway,Aetna,90838,CO,138.1,2026-06-01,MASTER updated Headway CO
+Alma,Cigna,90838,CO,124.0,2026-06-01,MASTER updated Alma CO
+Headway,Cigna,90838,CO,107.0,2026-06-01,MASTER updated Headway CO
+Alma,BCBS - Massachusetts (virtual network),90838,CO,98.63,2026-06-01,MASTER updated Alma CO
+Alma,Optum/UHC/Oscar,99214,FL,122.22,2026-06-01,MASTER updated Alma FL
+Headway,Optum/UHC/Oscar,99214,FL,99.4,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Optum/UHC/Oscar,99214,FL,85.95,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Aetna,99214,FL,109.9,2026-06-01,MASTER updated Alma FL
+Headway,Aetna,99214,FL,117.9,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Aetna,99214,FL,83.7,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Cigna,99214,FL,117.0,2026-06-01,MASTER updated Alma FL
+Headway,Cigna,99214,FL,97.0,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Cigna,99214,FL,87.1,2026-06-01,MASTER updated Grow Therapy FL
+Alma,BCBS - Massachusetts (virtual network),99214,FL,115.08,2026-06-01,MASTER updated Alma FL
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,FL,88.26,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Optum/UHC/Oscar,99215,FL,171.35,2026-06-01,MASTER updated Alma FL
+Headway,Optum/UHC/Oscar,99215,FL,135.1,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Optum/UHC/Oscar,99215,FL,115.93,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Aetna,99215,FL,109.9,2026-06-01,MASTER updated Alma FL
+Headway,Aetna,99215,FL,129.48,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Aetna,99215,FL,112.39,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Cigna,99215,FL,156.0,2026-06-01,MASTER updated Alma FL
+Headway,Cigna,99215,FL,131.0,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Cigna,99215,FL,115.05,2026-06-01,MASTER updated Grow Therapy FL
+Alma,BCBS - Massachusetts (virtual network),99215,FL,161.5,2026-06-01,MASTER updated Alma FL
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,FL,125.9,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Optum/UHC/Oscar,90833,FL,76.14,2026-06-01,MASTER updated Alma FL
+Headway,Optum/UHC/Oscar,90833,FL,62.73,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Optum/UHC/Oscar,90833,FL,54.29,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Aetna,90833,FL,69.2,2026-06-01,MASTER updated Alma FL
+Headway,Aetna,90833,FL,88.46,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Aetna,90833,FL,54.57,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Cigna,90833,FL,73.0,2026-06-01,MASTER updated Alma FL
+Headway,Cigna,90833,FL,59.0,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Cigna,90833,FL,52.65,2026-06-01,MASTER updated Grow Therapy FL
+Alma,BCBS - Massachusetts (virtual network),90833,FL,62.26,2026-06-01,MASTER updated Alma FL
+Grow Therapy,BCBS - Massachusetts (virtual network),90833,FL,48.4,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Optum/UHC/Oscar,90836,FL,104.34,2026-06-01,MASTER updated Alma FL
+Headway,Optum/UHC/Oscar,90836,FL,73.49,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Optum/UHC/Oscar,90836,FL,68.42,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Aetna,90836,FL,110.57,2026-06-01,MASTER updated Alma FL
+Headway,Aetna,90836,FL,117.57,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Aetna,90836,FL,79.01,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Cigna,90836,FL,91.0,2026-06-01,MASTER updated Alma FL
+Headway,Cigna,90836,FL,80.0,2026-06-01,MASTER updated Headway FL
+Grow Therapy,Cigna,90836,FL,64.35,2026-06-01,MASTER updated Grow Therapy FL
+Alma,BCBS - Massachusetts (virtual network),90836,FL,81.48,2026-06-01,MASTER updated Alma FL
+Grow Therapy,BCBS - Massachusetts (virtual network),90836,FL,60.79,2026-06-01,MASTER updated Grow Therapy FL
+Alma,Optum/UHC/Oscar,90838,FL,143.91,2026-06-01,MASTER updated Alma FL
+Headway,Optum/UHC/Oscar,90838,FL,102.29,2026-06-01,MASTER updated Headway FL
+Alma,Aetna,90838,FL,130.1,2026-06-01,MASTER updated Alma FL
+Headway,Aetna,90838,FL,138.1,2026-06-01,MASTER updated Headway FL
+Alma,Cigna,90838,FL,124.0,2026-06-01,MASTER updated Alma FL
+Headway,Cigna,90838,FL,107.0,2026-06-01,MASTER updated Headway FL
+Alma,BCBS - Massachusetts (virtual network),90838,FL,104.1,2026-06-01,MASTER updated Alma FL
+Alma,Optum/UHC/Oscar,99214,HI,109.8,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Optum/UHC/Oscar,99214,HI,82.38,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Aetna,99214,HI,109.9,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Aetna,99214,HI,83.7,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Cigna,99214,HI,117.0,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Cigna,99214,HI,87.1,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Optum/UHC/Oscar,99215,HI,166.55,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Optum/UHC/Oscar,99215,HI,111.1,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Aetna,99215,HI,109.9,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Aetna,99215,HI,112.39,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Cigna,99215,HI,156.0,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Cigna,99215,HI,115.05,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Optum/UHC/Oscar,90833,HI,73.01,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Optum/UHC/Oscar,90833,HI,52.02,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Aetna,90833,HI,69.2,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Aetna,90833,HI,54.57,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Cigna,90833,HI,73.0,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Cigna,90833,HI,52.65,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Optum/UHC/Oscar,90836,HI,100.42,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Optum/UHC/Oscar,90836,HI,65.58,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Aetna,90836,HI,110.57,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Aetna,90836,HI,79.01,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Cigna,90836,HI,91.0,2026-06-01,MASTER updated Alma HI
+Grow Therapy,Cigna,90836,HI,64.35,2026-06-01,MASTER updated Grow Therapy HI
+Alma,Optum/UHC/Oscar,90838,HI,131.87,2026-06-01,MASTER updated Alma HI
+Alma,Aetna,90838,HI,130.1,2026-06-01,MASTER updated Alma HI
+Alma,Cigna,90838,HI,124.0,2026-06-01,MASTER updated Alma HI
+Alma,Optum/UHC/Oscar,99214,ID,109.8,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Optum/UHC/Oscar,99214,ID,82.38,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Aetna,99214,ID,109.9,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Aetna,99214,ID,83.7,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Cigna,99214,ID,117.0,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Cigna,99214,ID,87.1,2026-06-01,MASTER updated Grow Therapy ID
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,ID,81.84,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Optum/UHC/Oscar,99215,ID,166.55,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Optum/UHC/Oscar,99215,ID,111.1,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Aetna,99215,ID,129.48,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Aetna,99215,ID,112.39,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Cigna,99215,ID,156.0,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Cigna,99215,ID,115.05,2026-06-01,MASTER updated Grow Therapy ID
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,ID,115.2,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Optum/UHC/Oscar,90833,ID,73.01,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Optum/UHC/Oscar,90833,ID,52.02,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Aetna,90833,ID,69.2,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Aetna,90833,ID,54.57,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Cigna,90833,ID,73.0,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Cigna,90833,ID,52.65,2026-06-01,MASTER updated Grow Therapy ID
+Grow Therapy,BCBS - Massachusetts (virtual network),90833,ID,43.16,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Optum/UHC/Oscar,90836,ID,100.42,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Optum/UHC/Oscar,90836,ID,65.68,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Aetna,90836,ID,110.57,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Aetna,90836,ID,79.01,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Cigna,90836,ID,91.0,2026-06-01,MASTER updated Alma ID
+Grow Therapy,Cigna,90836,ID,64.35,2026-06-01,MASTER updated Grow Therapy ID
+Grow Therapy,BCBS - Massachusetts (virtual network),90836,ID,54.55,2026-06-01,MASTER updated Grow Therapy ID
+Alma,Optum/UHC/Oscar,90838,ID,131.87,2026-06-01,MASTER updated Alma ID
+Alma,Aetna,90838,ID,130.1,2026-06-01,MASTER updated Alma ID
+Alma,Cigna,90838,ID,124.0,2026-06-01,MASTER updated Alma ID
+Alma,Optum/UHC/Oscar,99214,IA,118.8,2026-06-01,MASTER updated Alma IA
+Headway,Optum/UHC/Oscar,99214,IA,113.71,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Optum/UHC/Oscar,99214,IA,82.38,2026-06-01,MASTER updated Grow Therapy IA
+Alma,Aetna,99214,IA,109.9,2026-06-01,MASTER updated Alma IA
+Headway,Aetna,99214,IA,109.0,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Aetna,99214,IA,83.7,2026-06-01,MASTER updated Grow Therapy IA
+Alma,Cigna,99214,IA,117.0,2026-06-01,MASTER updated Alma IA
+Headway,Cigna,99214,IA,86.0,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Cigna,99214,IA,87.1,2026-06-01,MASTER updated Grow Therapy IA
+Alma,BCBS - Massachusetts (virtual network),99214,IA,115.08,2026-06-01,MASTER updated Alma IA
+Alma,Optum/UHC/Oscar,99215,IA,166.55,2026-06-01,MASTER updated Alma IA
+Headway,Optum/UHC/Oscar,99215,IA,160.41,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Optum/UHC/Oscar,99215,IA,111.1,2026-06-01,MASTER updated Grow Therapy IA
+Alma,Aetna,99215,IA,109.9,2026-06-01,MASTER updated Alma IA
+Headway,Aetna,99215,IA,118.0,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Aetna,99215,IA,112.39,2026-06-01,MASTER updated Grow Therapy IA
+Alma,Cigna,99215,IA,156.0,2026-06-01,MASTER updated Alma IA
+Headway,Cigna,99215,IA,116.0,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Cigna,99215,IA,115.05,2026-06-01,MASTER updated Grow Therapy IA
+Alma,BCBS - Massachusetts (virtual network),99215,IA,161.5,2026-06-01,MASTER updated Alma IA
+Alma,Optum/UHC/Oscar,90833,IA,74.01,2026-06-01,MASTER updated Alma IA
+Headway,Optum/UHC/Oscar,90833,IA,62.46,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Optum/UHC/Oscar,90833,IA,52.02,2026-06-01,MASTER updated Grow Therapy IA
+Alma,Aetna,90833,IA,69.2,2026-06-01,MASTER updated Alma IA
+Headway,Aetna,90833,IA,71.0,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Aetna,90833,IA,54.57,2026-06-01,MASTER updated Grow Therapy IA
+Alma,Cigna,90833,IA,73.0,2026-06-01,MASTER updated Alma IA
+Headway,Cigna,90833,IA,53.0,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Cigna,90833,IA,52.65,2026-06-01,MASTER updated Grow Therapy IA
+Alma,BCBS - Massachusetts (virtual network),90833,IA,62.26,2026-06-01,MASTER updated Alma IA
+Alma,Optum/UHC/Oscar,90836,IA,101.42,2026-06-01,MASTER updated Alma IA
+Headway,Optum/UHC/Oscar,90836,IA,78.85,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Optum/UHC/Oscar,90836,IA,65.58,2026-06-01,MASTER updated Grow Therapy IA
+Alma,Aetna,90836,IA,110.57,2026-06-01,MASTER updated Alma IA
+Headway,Aetna,90836,IA,103.0,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Aetna,90836,IA,79.01,2026-06-01,MASTER updated Grow Therapy IA
+Alma,Cigna,90836,IA,91.0,2026-06-01,MASTER updated Alma IA
+Headway,Cigna,90836,IA,71.0,2026-06-01,MASTER updated Headway IA
+Grow Therapy,Cigna,90836,IA,64.35,2026-06-01,MASTER updated Grow Therapy IA
+Alma,BCBS - Massachusetts (virtual network),90836,IA,81.48,2026-06-01,MASTER updated Alma IA
+Alma,Optum/UHC/Oscar,90838,IA,139.87,2026-06-01,MASTER updated Alma IA
+Headway,Optum/UHC/Oscar,90838,IA,103.7,2026-06-01,MASTER updated Headway IA
+Alma,Aetna,90838,IA,130.1,2026-06-01,MASTER updated Alma IA
+Headway,Aetna,90838,IA,124.0,2026-06-01,MASTER updated Headway IA
+Alma,Cigna,90838,IA,124.0,2026-06-01,MASTER updated Alma IA
+Headway,Cigna,90838,IA,95.0,2026-06-01,MASTER updated Headway IA
+Alma,BCBS - Massachusetts (virtual network),90838,IA,104.1,2026-06-01,MASTER updated Alma IA
+Alma,Optum/UHC/Oscar,99214,MD,118.8,2026-06-01,MASTER updated Alma MD
+Headway,Optum/UHC/Oscar,99214,MD,103.0,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Optum/UHC/Oscar,99214,MD,80.58,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Aetna,99214,MD,117.9,2026-06-01,MASTER updated Alma MD
+Headway,Aetna,99214,MD,117.9,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Aetna,99214,MD,83.7,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Cigna,99214,MD,117.0,2026-06-01,MASTER updated Alma MD
+Headway,Cigna,99214,MD,97.0,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Cigna,99214,MD,87.1,2026-06-01,MASTER updated Grow Therapy MD
+Alma,BCBS - Massachusetts (virtual network),99214,MD,115.08,2026-06-01,MASTER updated Alma MD
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,MD,62.89,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Optum/UHC/Oscar,99215,MD,166.55,2026-06-01,MASTER updated Alma MD
+Headway,Optum/UHC/Oscar,99215,MD,146.0,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Optum/UHC/Oscar,99215,MD,108.68,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Aetna,99215,MD,117.9,2026-06-01,MASTER updated Alma MD
+Headway,Aetna,99215,MD,129.48,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Aetna,99215,MD,112.39,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Cigna,99215,MD,156.0,2026-06-01,MASTER updated Alma MD
+Headway,Cigna,99215,MD,131.0,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Cigna,99215,MD,115.05,2026-06-01,MASTER updated Grow Therapy MD
+Alma,BCBS - Massachusetts (virtual network),99215,MD,161.5,2026-06-01,MASTER updated Alma MD
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,MD,84.42,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Optum/UHC/Oscar,90833,MD,74.01,2026-06-01,MASTER updated Alma MD
+Headway,Optum/UHC/Oscar,90833,MD,57.0,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Optum/UHC/Oscar,90833,MD,50.9,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Aetna,90833,MD,81.2,2026-06-01,MASTER updated Alma MD
+Headway,Aetna,90833,MD,88.46,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Aetna,90833,MD,54.57,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Cigna,90833,MD,73.0,2026-06-01,MASTER updated Alma MD
+Headway,Cigna,90833,MD,59.0,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Cigna,90833,MD,52.65,2026-06-01,MASTER updated Grow Therapy MD
+Alma,BCBS - Massachusetts (virtual network),90833,MD,62.26,2026-06-01,MASTER updated Alma MD
+Grow Therapy,BCBS - Massachusetts (virtual network),90833,MD,54.28,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Optum/UHC/Oscar,90836,MD,101.42,2026-06-01,MASTER updated Alma MD
+Headway,Optum/UHC/Oscar,90836,MD,72.0,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Optum/UHC/Oscar,90836,MD,71.68,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Aetna,90836,MD,117.57,2026-06-01,MASTER updated Alma MD
+Headway,Aetna,90836,MD,117.57,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Aetna,90836,MD,79.01,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Cigna,90836,MD,91.0,2026-06-01,MASTER updated Alma MD
+Headway,Cigna,90836,MD,80.0,2026-06-01,MASTER updated Headway MD
+Grow Therapy,Cigna,90836,MD,64.35,2026-06-01,MASTER updated Grow Therapy MD
+Alma,BCBS - Massachusetts (virtual network),90836,MD,81.48,2026-06-01,MASTER updated Alma MD
+Grow Therapy,BCBS - Massachusetts (virtual network),90836,MD,68.8,2026-06-01,MASTER updated Grow Therapy MD
+Alma,Optum/UHC/Oscar,90838,MD,139.87,2026-06-01,MASTER updated Alma MD
+Headway,Optum/UHC/Oscar,90838,MD,94.0,2026-06-01,MASTER updated Headway MD
+Alma,Aetna,90838,MD,138.1,2026-06-01,MASTER updated Alma MD
+Headway,Aetna,90838,MD,138.1,2026-06-01,MASTER updated Headway MD
+Alma,Cigna,90838,MD,124.0,2026-06-01,MASTER updated Alma MD
+Headway,Cigna,90838,MD,107.0,2026-06-01,MASTER updated Headway MD
+Alma,BCBS - Massachusetts (virtual network),90838,MD,104.1,2026-06-01,MASTER updated Alma MD
+Alma,Optum/UHC/Oscar,99214,MN,118.8,2026-06-01,MASTER updated Alma MN
+Headway,Optum/UHC/Oscar,99214,MN,106.15,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Optum/UHC/Oscar,99214,MN,82.38,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Aetna,99214,MN,117.9,2026-06-01,MASTER updated Alma MN
+Headway,Aetna,99214,MN,109.0,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Aetna,99214,MN,83.7,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Cigna,99214,MN,117.0,2026-06-01,MASTER updated Alma MN
+Headway,Cigna,99214,MN,81.0,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Cigna,99214,MN,87.1,2026-06-01,MASTER updated Grow Therapy MN
+Alma,BCBS - Massachusetts (virtual network),99214,MN,115.08,2026-06-01,MASTER updated Alma MN
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,MN,99.93,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Optum/UHC/Oscar,99215,MN,166.55,2026-06-01,MASTER updated Alma MN
+Headway,Optum/UHC/Oscar,99215,MN,150.54,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Optum/UHC/Oscar,99215,MN,111.1,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Aetna,99215,MN,117.9,2026-06-01,MASTER updated Alma MN
+Headway,Aetna,99215,MN,118.0,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Aetna,99215,MN,112.39,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Cigna,99215,MN,156.0,2026-06-01,MASTER updated Alma MN
+Headway,Cigna,99215,MN,109.0,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Cigna,99215,MN,115.05,2026-06-01,MASTER updated Grow Therapy MN
+Alma,BCBS - Massachusetts (virtual network),99215,MN,161.5,2026-06-01,MASTER updated Alma MN
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,MN,140.68,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Optum/UHC/Oscar,90833,MN,74.01,2026-06-01,MASTER updated Alma MN
+Headway,Optum/UHC/Oscar,90833,MN,58.87,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Optum/UHC/Oscar,90833,MN,52.02,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Aetna,90833,MN,81.2,2026-06-01,MASTER updated Alma MN
+Headway,Aetna,90833,MN,71.0,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Aetna,90833,MN,54.57,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Cigna,90833,MN,73.0,2026-06-01,MASTER updated Alma MN
+Headway,Cigna,90833,MN,49.0,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Cigna,90833,MN,52.65,2026-06-01,MASTER updated Grow Therapy MN
+Alma,BCBS - Massachusetts (virtual network),90833,MN,62.26,2026-06-01,MASTER updated Alma MN
+Grow Therapy,BCBS - Massachusetts (virtual network),90833,MN,56.06,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Optum/UHC/Oscar,90836,MN,101.42,2026-06-01,MASTER updated Alma MN
+Headway,Optum/UHC/Oscar,90836,MN,73.34,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Optum/UHC/Oscar,90836,MN,65.68,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Aetna,90836,MN,117.57,2026-06-01,MASTER updated Alma MN
+Headway,Aetna,90836,MN,103.0,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Aetna,90836,MN,79.01,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Cigna,90836,MN,91.0,2026-06-01,MASTER updated Alma MN
+Headway,Cigna,90836,MN,67.0,2026-06-01,MASTER updated Headway MN
+Grow Therapy,Cigna,90836,MN,64.35,2026-06-01,MASTER updated Grow Therapy MN
+Alma,BCBS - Massachusetts (virtual network),90836,MN,81.48,2026-06-01,MASTER updated Alma MN
+Grow Therapy,BCBS - Massachusetts (virtual network),90836,MN,70.86,2026-06-01,MASTER updated Grow Therapy MN
+Alma,Optum/UHC/Oscar,90838,MN,139.87,2026-06-01,MASTER updated Alma MN
+Headway,Optum/UHC/Oscar,90838,MN,97.47,2026-06-01,MASTER updated Headway MN
+Alma,Aetna,90838,MN,138.1,2026-06-01,MASTER updated Alma MN
+Headway,Aetna,90838,MN,124.0,2026-06-01,MASTER updated Headway MN
+Alma,Cigna,90838,MN,124.0,2026-06-01,MASTER updated Alma MN
+Headway,Cigna,90838,MN,89.0,2026-06-01,MASTER updated Headway MN
+Alma,BCBS - Massachusetts (virtual network),90838,MN,104.1,2026-06-01,MASTER updated Alma MN
+Alma,Optum/UHC/Oscar,99214,MT,109.8,2026-06-01,MASTER updated Alma MT
+Headway,Optum/UHC/Oscar,99214,MT,113.71,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Optum/UHC/Oscar,99214,MT,82.38,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Aetna,99214,MT,109.9,2026-06-01,MASTER updated Alma MT
+Headway,Aetna,99214,MT,109.0,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Aetna,99214,MT,83.7,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Cigna,99214,MT,117.0,2026-06-01,MASTER updated Alma MT
+Headway,Cigna,99214,MT,92.0,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Cigna,99214,MT,87.1,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Optum/UHC/Oscar,99215,MT,166.55,2026-06-01,MASTER updated Alma MT
+Headway,Optum/UHC/Oscar,99215,MT,160.41,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Optum/UHC/Oscar,99215,MT,111.1,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Aetna,99215,MT,109.9,2026-06-01,MASTER updated Alma MT
+Headway,Aetna,99215,MT,118.0,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Aetna,99215,MT,112.39,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Cigna,99215,MT,156.0,2026-06-01,MASTER updated Alma MT
+Headway,Cigna,99215,MT,124.0,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Cigna,99215,MT,115.05,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Optum/UHC/Oscar,90833,MT,73.01,2026-06-01,MASTER updated Alma MT
+Headway,Optum/UHC/Oscar,90833,MT,62.46,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Optum/UHC/Oscar,90833,MT,52.02,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Aetna,90833,MT,69.2,2026-06-01,MASTER updated Alma MT
+Headway,Aetna,90833,MT,71.0,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Aetna,90833,MT,54.57,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Cigna,90833,MT,73.0,2026-06-01,MASTER updated Alma MT
+Headway,Cigna,90833,MT,56.0,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Cigna,90833,MT,52.65,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Optum/UHC/Oscar,90836,MT,100.42,2026-06-01,MASTER updated Alma MT
+Headway,Optum/UHC/Oscar,90836,MT,78.85,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Optum/UHC/Oscar,90836,MT,65.68,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Aetna,90836,MT,110.57,2026-06-01,MASTER updated Alma MT
+Headway,Aetna,90836,MT,103.0,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Aetna,90836,MT,79.01,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Cigna,90836,MT,91.0,2026-06-01,MASTER updated Alma MT
+Headway,Cigna,90836,MT,76.0,2026-06-01,MASTER updated Headway MT
+Grow Therapy,Cigna,90836,MT,64.35,2026-06-01,MASTER updated Grow Therapy MT
+Alma,Optum/UHC/Oscar,90838,MT,131.87,2026-06-01,MASTER updated Alma MT
+Headway,Optum/UHC/Oscar,90838,MT,103.7,2026-06-01,MASTER updated Headway MT
+Alma,Aetna,90838,MT,130.1,2026-06-01,MASTER updated Alma MT
+Headway,Aetna,90838,MT,124.0,2026-06-01,MASTER updated Headway MT
+Alma,Cigna,90838,MT,124.0,2026-06-01,MASTER updated Alma MT
+Headway,Cigna,90838,MT,102.0,2026-06-01,MASTER updated Headway MT
+Alma,Optum/UHC/Oscar,99214,NE,109.8,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Optum/UHC/Oscar,99214,NE,82.38,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Aetna,99214,NE,109.9,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Aetna,99214,NE,83.7,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Cigna,99214,NE,117.0,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Cigna,99214,NE,87.1,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Optum/UHC/Oscar,99215,NE,166.55,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Optum/UHC/Oscar,99215,NE,111.1,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Aetna,99215,NE,109.9,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Aetna,99215,NE,112.39,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Cigna,99215,NE,156.0,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Cigna,99215,NE,115.05,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Optum/UHC/Oscar,90833,NE,73.01,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Optum/UHC/Oscar,90833,NE,52.02,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Aetna,90833,NE,69.2,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Aetna,90833,NE,54.57,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Cigna,90833,NE,73.0,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Cigna,90833,NE,52.65,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Optum/UHC/Oscar,90836,NE,100.42,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Optum/UHC/Oscar,90836,NE,65.68,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Aetna,90836,NE,110.57,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Aetna,90836,NE,79.01,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Cigna,90836,NE,91.0,2026-06-01,MASTER updated Alma NE
+Grow Therapy,Cigna,90836,NE,64.35,2026-06-01,MASTER updated Grow Therapy NE
+Alma,Optum/UHC/Oscar,90838,NE,131.87,2026-06-01,MASTER updated Alma NE
+Alma,Aetna,90838,NE,130.1,2026-06-01,MASTER updated Alma NE
+Alma,Cigna,90838,NE,124.0,2026-06-01,MASTER updated Alma NE
+Alma,Optum/UHC/Oscar,99214,NV,118.8,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Optum/UHC/Oscar,99214,NV,82.38,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Aetna,99214,NV,117.9,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Aetna,99214,NV,83.7,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Cigna,99214,NV,117.0,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Cigna,99214,NV,87.1,2026-06-01,MASTER updated Grow Therapy NV
+Alma,BCBS - Massachusetts (virtual network),99214,NV,104.9,2026-06-01,MASTER updated Alma NV
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,NV,72.93,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Optum/UHC/Oscar,99215,NV,166.55,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Optum/UHC/Oscar,99215,NV,111.1,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Aetna,99215,NV,117.9,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Aetna,99215,NV,112.39,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Cigna,99215,NV,156.0,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Cigna,99215,NV,115.05,2026-06-01,MASTER updated Grow Therapy NV
+Alma,BCBS - Massachusetts (virtual network),99215,NV,147.68,2026-06-01,MASTER updated Alma NV
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,NV,102.67,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Optum/UHC/Oscar,90833,NV,74.01,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Optum/UHC/Oscar,90833,NV,52.02,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Aetna,90833,NV,81.2,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Aetna,90833,NV,54.57,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Cigna,90833,NV,73.0,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Cigna,90833,NV,52.65,2026-06-01,MASTER updated Grow Therapy NV
+Alma,BCBS - Massachusetts (virtual network),90833,NV,58.85,2026-06-01,MASTER updated Alma NV
+Grow Therapy,BCBS - Massachusetts (virtual network),90833,NV,40.92,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Optum/UHC/Oscar,90836,NV,101.42,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Optum/UHC/Oscar,90836,NV,65.68,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Aetna,90836,NV,117.57,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Aetna,90836,NV,79.01,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Cigna,90836,NV,91.0,2026-06-01,MASTER updated Alma NV
+Grow Therapy,Cigna,90836,NV,64.35,2026-06-01,MASTER updated Grow Therapy NV
+Alma,BCBS - Massachusetts (virtual network),90836,NV,74.39,2026-06-01,MASTER updated Alma NV
+Grow Therapy,BCBS - Massachusetts (virtual network),90836,NV,51.71,2026-06-01,MASTER updated Grow Therapy NV
+Alma,Optum/UHC/Oscar,90838,NV,139.87,2026-06-01,MASTER updated Alma NV
+Alma,Aetna,90838,NV,138.1,2026-06-01,MASTER updated Alma NV
+Alma,Cigna,90838,NV,124.0,2026-06-01,MASTER updated Alma NV
+Alma,BCBS - Massachusetts (virtual network),90838,NV,98.63,2026-06-01,MASTER updated Alma NV
+Alma,Optum/UHC/Oscar,99214,NM,118.8,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Optum/UHC/Oscar,99214,NM,80.17,2026-06-01,MASTER updated Grow Therapy NM
+Alma,Aetna,99214,NM,117.9,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Aetna,99214,NM,77.26,2026-06-01,MASTER updated Grow Therapy NM
+Alma,Cigna,99214,NM,117.0,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Cigna,99214,NM,78.53,2026-06-01,MASTER updated Grow Therapy NM
+Alma,BCBS - Massachusetts (virtual network),99214,NM,115.08,2026-06-01,MASTER updated Alma NM
+Alma,Optum/UHC/Oscar,99215,NM,166.55,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Optum/UHC/Oscar,99215,NM,112.33,2026-06-01,MASTER updated Grow Therapy NM
+Alma,Aetna,99215,NM,117.9,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Aetna,99215,NM,103.75,2026-06-01,MASTER updated Grow Therapy NM
+Alma,Cigna,99215,NM,156.0,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Cigna,99215,NM,103.73,2026-06-01,MASTER updated Grow Therapy NM
+Alma,BCBS - Massachusetts (virtual network),99215,NM,161.5,2026-06-01,MASTER updated Alma NM
+Alma,Optum/UHC/Oscar,90833,NM,74.01,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Optum/UHC/Oscar,90833,NM,47.46,2026-06-01,MASTER updated Grow Therapy NM
+Alma,Aetna,90833,NM,81.2,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Aetna,90833,NM,50.37,2026-06-01,MASTER updated Grow Therapy NM
+Alma,Cigna,90833,NM,73.0,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Cigna,90833,NM,47.47,2026-06-01,MASTER updated Grow Therapy NM
+Alma,BCBS - Massachusetts (virtual network),90833,NM,62.26,2026-06-01,MASTER updated Alma NM
+Alma,Optum/UHC/Oscar,90836,NM,101.42,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Optum/UHC/Oscar,90836,NM,55.0,2026-06-01,MASTER updated Grow Therapy NM
+Alma,Aetna,90836,NM,117.57,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Aetna,90836,NM,72.93,2026-06-01,MASTER updated Grow Therapy NM
+Alma,Cigna,90836,NM,91.0,2026-06-01,MASTER updated Alma NM
+Grow Therapy,Cigna,90836,NM,58.02,2026-06-01,MASTER updated Grow Therapy NM
+Alma,BCBS - Massachusetts (virtual network),90836,NM,81.48,2026-06-01,MASTER updated Alma NM
+Alma,Optum/UHC/Oscar,90838,NM,139.87,2026-06-01,MASTER updated Alma NM
+Alma,Aetna,90838,NM,138.1,2026-06-01,MASTER updated Alma NM
+Alma,Cigna,90838,NM,124.0,2026-06-01,MASTER updated Alma NM
+Alma,BCBS - Massachusetts (virtual network),90838,NM,104.1,2026-06-01,MASTER updated Alma NM
+Alma,Optum/UHC/Oscar,99214,ND,109.8,2026-06-01,MASTER updated Alma ND
+Alma,Aetna,99214,ND,109.9,2026-06-01,MASTER updated Alma ND
+Alma,Cigna,99214,ND,117.0,2026-06-01,MASTER updated Alma ND
+Alma,Optum/UHC/Oscar,99215,ND,166.55,2026-06-01,MASTER updated Alma ND
+Alma,Aetna,99215,ND,109.9,2026-06-01,MASTER updated Alma ND
+Alma,Cigna,99215,ND,156.0,2026-06-01,MASTER updated Alma ND
+Alma,Optum/UHC/Oscar,90833,ND,73.01,2026-06-01,MASTER updated Alma ND
+Alma,Aetna,90833,ND,69.2,2026-06-01,MASTER updated Alma ND
+Alma,Cigna,90833,ND,73.0,2026-06-01,MASTER updated Alma ND
+Alma,Optum/UHC/Oscar,90836,ND,100.42,2026-06-01,MASTER updated Alma ND
+Alma,Aetna,90836,ND,110.57,2026-06-01,MASTER updated Alma ND
+Alma,Cigna,90836,ND,91.0,2026-06-01,MASTER updated Alma ND
+Alma,Optum/UHC/Oscar,90838,ND,131.87,2026-06-01,MASTER updated Alma ND
+Alma,Aetna,90838,ND,130.1,2026-06-01,MASTER updated Alma ND
+Alma,Cigna,90838,ND,124.0,2026-06-01,MASTER updated Alma ND
+Alma,Optum/UHC/Oscar,99214,OR,118.8,2026-06-01,MASTER updated Alma OR
+Headway,Optum/UHC/Oscar,99214,OR,113.71,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Optum/UHC/Oscar,99214,OR,82.38,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Aetna,99214,OR,117.9,2026-06-01,MASTER updated Alma OR
+Headway,Aetna,99214,OR,128.0,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Aetna,99214,OR,83.7,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Cigna,99214,OR,117.0,2026-06-01,MASTER updated Alma OR
+Headway,Cigna,99214,OR,92.0,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Cigna,99214,OR,87.1,2026-06-01,MASTER updated Grow Therapy OR
+Alma,BCBS - Massachusetts (virtual network),99214,OR,115.08,2026-06-01,MASTER updated Alma OR
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,OR,79.36,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Optum/UHC/Oscar,99215,OR,173.43,2026-06-01,MASTER updated Alma OR
+Headway,Optum/UHC/Oscar,99215,OR,150.54,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Optum/UHC/Oscar,99215,OR,111.1,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Aetna,99215,OR,117.9,2026-06-01,MASTER updated Alma OR
+Headway,Aetna,99215,OR,118.0,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Aetna,99215,OR,112.39,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Cigna,99215,OR,156.0,2026-06-01,MASTER updated Alma OR
+Headway,Cigna,99215,OR,124.0,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Cigna,99215,OR,115.05,2026-06-01,MASTER updated Grow Therapy OR
+Alma,BCBS - Massachusetts (virtual network),99215,OR,161.5,2026-06-01,MASTER updated Alma OR
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,OR,112.39,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Optum/UHC/Oscar,90833,OR,74.01,2026-06-01,MASTER updated Alma OR
+Headway,Optum/UHC/Oscar,90833,OR,62.46,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Optum/UHC/Oscar,90833,OR,52.02,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Aetna,90833,OR,81.2,2026-06-01,MASTER updated Alma OR
+Headway,Aetna,90833,OR,84.0,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Aetna,90833,OR,54.57,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Cigna,90833,OR,73.0,2026-06-01,MASTER updated Alma OR
+Headway,Cigna,90833,OR,56.0,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Cigna,90833,OR,52.65,2026-06-01,MASTER updated Grow Therapy OR
+Alma,BCBS - Massachusetts (virtual network),90833,OR,62.26,2026-06-01,MASTER updated Alma OR
+Grow Therapy,BCBS - Massachusetts (virtual network),90833,OR,50.64,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Optum/UHC/Oscar,90836,OR,101.42,2026-06-01,MASTER updated Alma OR
+Headway,Optum/UHC/Oscar,90836,OR,73.34,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Optum/UHC/Oscar,90836,OR,65.58,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Aetna,90836,OR,117.57,2026-06-01,MASTER updated Alma OR
+Headway,Aetna,90836,OR,103.0,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Aetna,90836,OR,79.01,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Cigna,90836,OR,91.0,2026-06-01,MASTER updated Alma OR
+Headway,Cigna,90836,OR,76.0,2026-06-01,MASTER updated Headway OR
+Grow Therapy,Cigna,90836,OR,64.35,2026-06-01,MASTER updated Grow Therapy OR
+Alma,BCBS - Massachusetts (virtual network),90836,OR,81.48,2026-06-01,MASTER updated Alma OR
+Grow Therapy,BCBS - Massachusetts (virtual network),90836,OR,64.0,2026-06-01,MASTER updated Grow Therapy OR
+Alma,Optum/UHC/Oscar,90838,OR,139.87,2026-06-01,MASTER updated Alma OR
+Headway,Optum/UHC/Oscar,90838,OR,97.47,2026-06-01,MASTER updated Headway OR
+Alma,Aetna,90838,OR,138.1,2026-06-01,MASTER updated Alma OR
+Headway,Aetna,90838,OR,124.0,2026-06-01,MASTER updated Headway OR
+Alma,Cigna,90838,OR,124.0,2026-06-01,MASTER updated Alma OR
+Headway,Cigna,90838,OR,102.0,2026-06-01,MASTER updated Headway OR
+Alma,BCBS - Massachusetts (virtual network),90838,OR,104.1,2026-06-01,MASTER updated Alma OR
+Grow Therapy,Optum/UHC/Oscar,99214,SD,82.38,2026-06-01,MASTER updated Grow Therapy SD
+Alma,Aetna,99214,SD,109.9,2026-06-01,MASTER updated Alma SD
+Grow Therapy,Aetna,99214,SD,83.7,2026-06-01,MASTER updated Grow Therapy SD
+Alma,Cigna,99214,SD,117.0,2026-06-01,MASTER updated Alma SD
+Grow Therapy,Cigna,99214,SD,87.1,2026-06-01,MASTER updated Grow Therapy SD
+Grow Therapy,Optum/UHC/Oscar,99215,SD,111.1,2026-06-01,MASTER updated Grow Therapy SD
+Alma,Aetna,99215,SD,109.9,2026-06-01,MASTER updated Alma SD
+Grow Therapy,Aetna,99215,SD,112.39,2026-06-01,MASTER updated Grow Therapy SD
+Alma,Cigna,99215,SD,156.0,2026-06-01,MASTER updated Alma SD
+Grow Therapy,Cigna,99215,SD,115.05,2026-06-01,MASTER updated Grow Therapy SD
+Grow Therapy,Optum/UHC/Oscar,90833,SD,52.02,2026-06-01,MASTER updated Grow Therapy SD
+Alma,Aetna,90833,SD,69.2,2026-06-01,MASTER updated Alma SD
+Grow Therapy,Aetna,90833,SD,54.57,2026-06-01,MASTER updated Grow Therapy SD
+Alma,Cigna,90833,SD,73.0,2026-06-01,MASTER updated Alma SD
+Grow Therapy,Cigna,90833,SD,52.65,2026-06-01,MASTER updated Grow Therapy SD
+Grow Therapy,Optum/UHC/Oscar,90836,SD,65.58,2026-06-01,MASTER updated Grow Therapy SD
+Alma,Aetna,90836,SD,110.57,2026-06-01,MASTER updated Alma SD
+Grow Therapy,Aetna,90836,SD,79.01,2026-06-01,MASTER updated Grow Therapy SD
+Alma,Cigna,90836,SD,91.0,2026-06-01,MASTER updated Alma SD
+Grow Therapy,Cigna,90836,SD,64.35,2026-06-01,MASTER updated Grow Therapy SD
+Alma,Aetna,90838,SD,130.1,2026-06-01,MASTER updated Alma SD
+Alma,Cigna,90838,SD,124.0,2026-06-01,MASTER updated Alma SD
+Alma,Optum/UHC/Oscar,99214,WA,118.8,2026-06-01,MASTER updated Alma WA
+Headway,Optum/UHC/Oscar,99214,WA,100.0,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Optum/UHC/Oscar,99214,WA,82.38,2026-06-01,MASTER updated Grow Therapy WA
+Alma,Aetna,99214,WA,129.9,2026-06-01,MASTER updated Alma WA
+Headway,Aetna,99214,WA,117.9,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Aetna,99214,WA,83.7,2026-06-01,MASTER updated Grow Therapy WA
+Alma,Cigna,99214,WA,117.0,2026-06-01,MASTER updated Alma WA
+Headway,Cigna,99214,WA,97.0,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Cigna,99214,WA,87.1,2026-06-01,MASTER updated Grow Therapy WA
+Alma,BCBS - Massachusetts (virtual network),99214,WA,115.08,2026-06-01,MASTER updated Alma WA
+Alma,Optum/UHC/Oscar,99215,WA,173.43,2026-06-01,MASTER updated Alma WA
+Headway,Optum/UHC/Oscar,99215,WA,140.0,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Optum/UHC/Oscar,99215,WA,111.1,2026-06-01,MASTER updated Grow Therapy WA
+Alma,Aetna,99215,WA,129.9,2026-06-01,MASTER updated Alma WA
+Headway,Aetna,99215,WA,129.48,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Aetna,99215,WA,112.39,2026-06-01,MASTER updated Grow Therapy WA
+Alma,Cigna,99215,WA,156.0,2026-06-01,MASTER updated Alma WA
+Headway,Cigna,99215,WA,131.0,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Cigna,99215,WA,115.05,2026-06-01,MASTER updated Grow Therapy WA
+Alma,BCBS - Massachusetts (virtual network),99215,WA,161.5,2026-06-01,MASTER updated Alma WA
+Alma,Optum/UHC/Oscar,90833,WA,74.01,2026-06-01,MASTER updated Alma WA
+Headway,Optum/UHC/Oscar,90833,WA,60.0,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Optum/UHC/Oscar,90833,WA,52.02,2026-06-01,MASTER updated Grow Therapy WA
+Alma,Aetna,90833,WA,81.2,2026-06-01,MASTER updated Alma WA
+Headway,Aetna,90833,WA,88.46,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Aetna,90833,WA,54.57,2026-06-01,MASTER updated Grow Therapy WA
+Alma,Cigna,90833,WA,73.0,2026-06-01,MASTER updated Alma WA
+Headway,Cigna,90833,WA,59.0,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Cigna,90833,WA,52.65,2026-06-01,MASTER updated Grow Therapy WA
+Alma,BCBS - Massachusetts (virtual network),90833,WA,62.26,2026-06-01,MASTER updated Alma WA
+Alma,Optum/UHC/Oscar,90836,WA,101.42,2026-06-01,MASTER updated Alma WA
+Headway,Optum/UHC/Oscar,90836,WA,76.16,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Optum/UHC/Oscar,90836,WA,65.58,2026-06-01,MASTER updated Grow Therapy WA
+Alma,Aetna,90836,WA,117.57,2026-06-01,MASTER updated Alma WA
+Headway,Aetna,90836,WA,117.57,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Aetna,90836,WA,79.01,2026-06-01,MASTER updated Grow Therapy WA
+Alma,Cigna,90836,WA,91.0,2026-06-01,MASTER updated Alma WA
+Headway,Cigna,90836,WA,80.0,2026-06-01,MASTER updated Headway WA
+Grow Therapy,Cigna,90836,WA,64.35,2026-06-01,MASTER updated Grow Therapy WA
+Alma,BCBS - Massachusetts (virtual network),90836,WA,81.48,2026-06-01,MASTER updated Alma WA
+Alma,Optum/UHC/Oscar,90838,WA,139.87,2026-06-01,MASTER updated Alma WA
+Headway,Optum/UHC/Oscar,90838,WA,106.0,2026-06-01,MASTER updated Headway WA
+Alma,Aetna,90838,WA,138.1,2026-06-01,MASTER updated Alma WA
+Headway,Aetna,90838,WA,138.1,2026-06-01,MASTER updated Headway WA
+Alma,Cigna,90838,WA,124.0,2026-06-01,MASTER updated Alma WA
+Headway,Cigna,90838,WA,107.0,2026-06-01,MASTER updated Headway WA
+Alma,BCBS - Massachusetts (virtual network),90838,WA,104.1,2026-06-01,MASTER updated Alma WA
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,WA,62.89,2026-06-01,MASTER updated Grow Therapy WA
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,WA,84.42,2026-06-01,MASTER updated Grow Therapy WA
+Grow Therapy,BCBS - Massachusetts (virtual network),90833,WA,54.28,2026-06-01,MASTER updated Grow Therapy WA
+Grow Therapy,BCBS - Massachusetts (virtual network),90836,WA,68.8,2026-06-01,MASTER updated Grow Therapy WA
+Alma,Optum/UHC/Oscar,99214,WY,109.8,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Optum/UHC/Oscar,99214,WY,80.17,2026-06-01,MASTER updated Grow Therapy WY
+Alma,Aetna,99214,WY,109.9,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Aetna,99214,WY,77.26,2026-06-01,MASTER updated Grow Therapy WY
+Alma,Cigna,99214,WY,117.0,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Cigna,99214,WY,78.53,2026-06-01,MASTER updated Grow Therapy WY
+Headway,BCBS - Massachusetts (virtual network),99214,WY,132.0,2026-06-01,MASTER updated Headway WY
+Alma,Optum/UHC/Oscar,99215,WY,166.55,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Optum/UHC/Oscar,99215,WY,103.73,2026-06-01,MASTER updated Grow Therapy WY
+Alma,Aetna,99215,WY,109.9,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Aetna,99215,WY,103.75,2026-06-01,MASTER updated Grow Therapy WY
+Alma,Cigna,99215,WY,156.0,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Cigna,99215,WY,103.73,2026-06-01,MASTER updated Grow Therapy WY
+Headway,BCBS - Massachusetts (virtual network),99215,WY,185.0,2026-06-01,MASTER updated Headway WY
+Alma,Optum/UHC/Oscar,90833,WY,73.01,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Optum/UHC/Oscar,90833,WY,47.46,2026-06-01,MASTER updated Grow Therapy WY
+Alma,Aetna,90833,WY,69.2,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Aetna,90833,WY,50.37,2026-06-01,MASTER updated Grow Therapy WY
+Alma,Cigna,90833,WY,73.0,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Cigna,90833,WY,47.47,2026-06-01,MASTER updated Grow Therapy WY
+Headway,BCBS - Massachusetts (virtual network),90833,WY,71.0,2026-06-01,MASTER updated Headway WY
+Alma,Optum/UHC/Oscar,90836,WY,100.42,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Optum/UHC/Oscar,90836,WY,55.0,2026-06-01,MASTER updated Grow Therapy WY
+Alma,Aetna,90836,WY,110.57,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Aetna,90836,WY,72.93,2026-06-01,MASTER updated Grow Therapy WY
+Alma,Cigna,90836,WY,91.0,2026-06-01,MASTER updated Alma WY
+Grow Therapy,Cigna,90836,WY,58.02,2026-06-01,MASTER updated Grow Therapy WY
+Headway,BCBS - Massachusetts (virtual network),90836,WY,89.0,2026-06-01,MASTER updated Headway WY
+Alma,Optum/UHC/Oscar,90838,WY,131.87,2026-06-01,MASTER updated Alma WY
+Alma,Aetna,90838,WY,130.1,2026-06-01,MASTER updated Alma WY
+Alma,Cigna,90838,WY,124.0,2026-06-01,MASTER updated Alma WY
+Headway,BCBS - Massachusetts (virtual network),90838,WY,111.0,2026-06-01,MASTER updated Headway WY
+Alma,Optum/UHC/Oscar,99214,KS,109.8,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Optum/UHC/Oscar,99214,KS,82.38,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Aetna,99214,KS,109.9,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Aetna,99214,KS,83.7,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Cigna,99214,KS,117.0,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Cigna,99214,KS,87.1,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Optum/UHC/Oscar,99215,KS,154.94,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Optum/UHC/Oscar,99215,KS,111.1,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Aetna,99215,KS,109.9,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Aetna,99215,KS,112.39,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Cigna,99215,KS,156.0,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Cigna,99215,KS,115.05,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Optum/UHC/Oscar,90833,KS,64.18,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Optum/UHC/Oscar,90833,KS,52.02,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Aetna,90833,KS,69.2,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Aetna,90833,KS,54.57,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Cigna,90833,KS,73.0,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Cigna,90833,KS,52.65,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Optum/UHC/Oscar,90836,KS,81.1,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Optum/UHC/Oscar,90836,KS,65.58,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Aetna,90836,KS,110.57,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Aetna,90836,KS,79.01,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Cigna,90836,KS,91.0,2026-06-01,MASTER updated Alma KS
+Grow Therapy,Cigna,90836,KS,64.35,2026-06-01,MASTER updated Grow Therapy KS
+Alma,Optum/UHC/Oscar,90838,KS,107.55,2026-06-01,MASTER updated Alma KS
+Alma,Aetna,90838,KS,130.1,2026-06-01,MASTER updated Alma KS
+Alma,Cigna,90838,KS,124.0,2026-06-01,MASTER updated Alma KS
+Alma,Optum/UHC/Oscar,99214,NH,109.8,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Optum/UHC/Oscar,99214,NH,82.38,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Aetna,99214,NH,109.9,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Aetna,99214,NH,83.7,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Cigna,99214,NH,117.0,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Cigna,99214,NH,87.1,2026-06-01,MASTER updated Grow Therapy NH
+Alma,BCBS - Massachusetts (virtual network),99214,NH,104.9,2026-06-01,MASTER updated Alma NH
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,NH,72.93,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Optum/UHC/Oscar,99215,NH,154.94,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Optum/UHC/Oscar,99215,NH,111.1,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Aetna,99215,NH,109.9,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Aetna,99215,NH,112.39,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Cigna,99215,NH,156.0,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Cigna,99215,NH,115.05,2026-06-01,MASTER updated Grow Therapy NH
+Alma,BCBS - Massachusetts (virtual network),99215,NH,147.68,2026-06-01,MASTER updated Alma NH
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,NH,102.67,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Optum/UHC/Oscar,90833,NH,64.18,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Optum/UHC/Oscar,90833,NH,52.02,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Aetna,90833,NH,69.2,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Aetna,90833,NH,54.57,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Cigna,90833,NH,73.0,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Cigna,90833,NH,52.65,2026-06-01,MASTER updated Grow Therapy NH
+Alma,BCBS - Massachusetts (virtual network),90833,NH,58.85,2026-06-01,MASTER updated Alma NH
+Grow Therapy,BCBS - Massachusetts (virtual network),90833,NH,40.92,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Optum/UHC/Oscar,90836,NH,81.1,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Optum/UHC/Oscar,90836,NH,65.58,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Aetna,90836,NH,110.57,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Aetna,90836,NH,79.01,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Cigna,90836,NH,91.0,2026-06-01,MASTER updated Alma NH
+Grow Therapy,Cigna,90836,NH,64.35,2026-06-01,MASTER updated Grow Therapy NH
+Alma,BCBS - Massachusetts (virtual network),90836,NH,74.39,2026-06-01,MASTER updated Alma NH
+Grow Therapy,BCBS - Massachusetts (virtual network),90836,NH,51.71,2026-06-01,MASTER updated Grow Therapy NH
+Alma,Optum/UHC/Oscar,90838,NH,107.55,2026-06-01,MASTER updated Alma NH
+Alma,Aetna,90838,NH,130.1,2026-06-01,MASTER updated Alma NH
+Alma,Cigna,90838,NH,124.0,2026-06-01,MASTER updated Alma NH
+Alma,BCBS - Massachusetts (virtual network),90838,NH,98.63,2026-06-01,MASTER updated Alma NH
+Alma,Optum/UHC/Oscar,99214,ME,109.8,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Optum/UHC/Oscar,99214,ME,82.38,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Aetna,99214,ME,109.9,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Aetna,99214,ME,83.7,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Cigna,99214,ME,117.0,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Cigna,99214,ME,87.1,2026-06-01,MASTER updated Grow Therapy ME
+Alma,BCBS - Massachusetts (virtual network),99214,ME,104.9,2026-06-01,MASTER updated Alma ME
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,ME,72.93,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Optum/UHC/Oscar,99215,ME,154.94,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Optum/UHC/Oscar,99215,ME,111.1,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Aetna,99215,ME,109.9,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Aetna,99215,ME,112.39,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Cigna,99215,ME,156.0,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Cigna,99215,ME,115.05,2026-06-01,MASTER updated Grow Therapy ME
+Alma,BCBS - Massachusetts (virtual network),99215,ME,147.68,2026-06-01,MASTER updated Alma ME
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,ME,102.67,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Optum/UHC/Oscar,90833,ME,64.18,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Optum/UHC/Oscar,90833,ME,52.02,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Aetna,90833,ME,69.2,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Aetna,90833,ME,54.57,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Cigna,90833,ME,73.0,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Cigna,90833,ME,52.65,2026-06-01,MASTER updated Grow Therapy ME
+Alma,BCBS - Massachusetts (virtual network),90833,ME,58.85,2026-06-01,MASTER updated Alma ME
+Grow Therapy,BCBS - Massachusetts (virtual network),90833,ME,40.92,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Optum/UHC/Oscar,90836,ME,81.1,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Optum/UHC/Oscar,90836,ME,65.58,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Aetna,90836,ME,110.57,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Aetna,90836,ME,79.01,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Cigna,90836,ME,91.0,2026-06-01,MASTER updated Alma ME
+Grow Therapy,Cigna,90836,ME,64.35,2026-06-01,MASTER updated Grow Therapy ME
+Alma,BCBS - Massachusetts (virtual network),90836,ME,74.39,2026-06-01,MASTER updated Alma ME
+Grow Therapy,BCBS - Massachusetts (virtual network),90836,ME,51.71,2026-06-01,MASTER updated Grow Therapy ME
+Alma,Optum/UHC/Oscar,90838,ME,107.55,2026-06-01,MASTER updated Alma ME
+Alma,Aetna,90838,ME,130.1,2026-06-01,MASTER updated Alma ME
+Alma,Cigna,90838,ME,124.0,2026-06-01,MASTER updated Alma ME
+Alma,BCBS - Massachusetts (virtual network),90838,ME,98.63,2026-06-01,MASTER updated Alma ME
+Alma,Optum/UHC/Oscar,99214,VT,109.8,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Optum/UHC/Oscar,99214,VT,82.38,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Aetna,99214,VT,109.9,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Aetna,99214,VT,83.7,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Cigna,99214,VT,117.0,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Cigna,99214,VT,87.1,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Optum/UHC/Oscar,99215,VT,154.94,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Optum/UHC/Oscar,99215,VT,111.1,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Aetna,99215,VT,109.9,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Aetna,99215,VT,112.39,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Cigna,99215,VT,156.0,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Cigna,99215,VT,115.05,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Optum/UHC/Oscar,90833,VT,64.18,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Optum/UHC/Oscar,90833,VT,52.02,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Aetna,90833,VT,69.2,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Aetna,90833,VT,54.57,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Cigna,90833,VT,73.0,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Cigna,90833,VT,52.65,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Optum/UHC/Oscar,90836,VT,81.1,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Optum/UHC/Oscar,90836,VT,65.58,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Aetna,90836,VT,110.57,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Aetna,90836,VT,79.01,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Cigna,90836,VT,91.0,2026-06-01,MASTER updated Alma VT
+Grow Therapy,Cigna,90836,VT,64.35,2026-06-01,MASTER updated Grow Therapy VT
+Alma,Optum/UHC/Oscar,90838,VT,107.55,2026-06-01,MASTER updated Alma VT
+Alma,Aetna,90838,VT,130.1,2026-06-01,MASTER updated Alma VT
+Alma,Cigna,90838,VT,124.0,2026-06-01,MASTER updated Alma VT
+Alma,BCBS - Massachusetts (virtual network),99214,VT,104.9,2026-06-01,MASTER updated Alma VT
+Grow Therapy,BCBS - Massachusetts (virtual network),99214,VT,47.68,2026-06-01,MASTER updated Grow Therapy VT
+Alma,BCBS - Massachusetts (virtual network),99215,VT,147.68,2026-06-01,MASTER updated Alma VT
+Grow Therapy,BCBS - Massachusetts (virtual network),99215,VT,63.66,2026-06-01,MASTER updated Grow Therapy VT

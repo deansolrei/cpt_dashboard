@@ -1,0 +1,106 @@
+intermediary_name,payer_name,cpt_code,state,allowed_amount,effective_date,notes
+Headway,Horizon Blue Cross Blue Shield of NJ,99214,AK,125.55,2026-03-30,Est patient E/M moderate complexity
+Headway,Independence Blue Cross PA,99214,AK,99.98,2026-03-30,Est patient E/M moderate complexity
+Headway,Horizon Blue Cross Blue Shield of NJ,99215,AK,156.97,2026-03-30,Est patient E/M high complexity
+Headway,Independence Blue Cross PA,99215,AK,140.77,2026-03-30,Est patient E/M high complexity
+Headway,Horizon Blue Cross Blue Shield of NJ,90833,AK,71.03,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Independence Blue Cross PA,90833,AK,58.5,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Horizon Blue Cross Blue Shield of NJ,90836,AK,89.56,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Independence Blue Cross PA,90836,AK,70.39,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Horizon Blue Cross Blue Shield of NJ,90838,AK,118.45,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Independence Blue Cross PA,90838,AK,93.36,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Blue Cross Blue Shield of Arizona,99214,AZ,88.0,2026-03-30,Est patient E/M moderate complexity
+Headway,Blue Cross Blue Shield of Arizona,99215,AZ,123.0,2026-03-30,Est patient E/M high complexity
+Headway,Blue Cross Blue Shield of Arizona,90833,AZ,62.0,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Blue Cross Blue Shield of Arizona,90836,AZ,93.0,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Blue Cross Blue Shield of Arizona,90838,AZ,123.0,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Anthem BCBS Colorado HMO,99214,CO,105.0,2026-03-30,Est patient E/M moderate complexity
+Headway,Anthem BCBS Colorado PPO,99214,CO,105.0,2026-03-30,Est patient E/M moderate complexity
+Headway,Anthem BCBS Colorado HMO,99215,CO,141.0,2026-03-30,Est patient E/M high complexity
+Headway,Anthem BCBS Colorado PPO,99215,CO,141.0,2026-03-30,Est patient E/M high complexity
+Headway,Anthem BCBS Colorado HMO,90833,CO,67.0,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Anthem BCBS Colorado PPO,90833,CO,67.0,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Anthem BCBS Colorado HMO,90836,CO,107.0,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Anthem BCBS Colorado PPO,90836,CO,107.0,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Anthem BCBS Colorado HMO,90838,CO,146.0,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Anthem BCBS Colorado PPO,90838,CO,146.0,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Blue Cross Blue Shield of Massachusetts,99214,FL,132.0,2026-03-30,Est patient E/M moderate complexity
+Headway,Florida Blue,99214,FL,93.0,2026-03-30,Est patient E/M moderate complexity
+Headway,Florida Blue Medicare Advantage,99214,FL,93.0,2026-03-30,Est patient E/M moderate complexity
+Headway,Horizon Blue Cross Blue Shield of NJ,99214,FL,125.55,2026-03-30,Est patient E/M moderate complexity
+Headway,Independence Blue Cross PA,99214,FL,99.98,2026-03-30,Est patient E/M moderate complexity
+Headway,Anthem BCBS Indiana,99214,FL,93.0,2026-06-23,Est patient E/M moderate complexity
+Headway,Blue Cross Blue Shield of Massachusetts,99215,FL,185.0,2026-03-30,Est patient E/M high complexity
+Headway,Florida Blue,99215,FL,131.62,2026-03-30,Est patient E/M high complexity
+Headway,Florida Blue Medicare Advantage,99215,FL,131.62,2026-03-30,Est patient E/M high complexity
+Headway,Horizon Blue Cross Blue Shield of NJ,99215,FL,156.97,2026-03-30,Est patient E/M high complexity
+Headway,Independence Blue Cross PA,99215,FL,140.77,2026-03-30,Est patient E/M high complexity
+Headway,Anthem BCBS Indiana,99215,FL,131.62,2026-06-23,Est patient E/M high complexity
+Headway,Blue Cross Blue Shield of Massachusetts,90833,FL,71.0,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Florida Blue,90833,FL,52.63,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Florida Blue Medicare Advantage,90833,FL,59.0,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Horizon Blue Cross Blue Shield of NJ,90833,FL,51.58,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Independence Blue Cross PA,90833,FL,71.03,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Anthem BCBS Indiana,90833,FL,51.58,2026-06-23,Add-on psychotherapy 30 min with E/M
+Headway,Blue Cross Blue Shield of Massachusetts,90836,FL,89.0,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Florida Blue,90836,FL,64.91,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Florida Blue Medicare Advantage,90836,FL,64.91,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Horizon Blue Cross Blue Shield of NJ,90836,FL,89.56,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Independence Blue Cross PA,90836,FL,70.39,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Anthem BCBS Indiana,90836,FL,64.91,2026-06-23,Add-on psychotherapy 45 min with E/M
+Headway,Blue Cross Blue Shield of Massachusetts,90838,FL,111.0,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Florida Blue,90838,FL,86.22,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Florida Blue Medicare Advantage,90838,FL,86.22,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Horizon Blue Cross Blue Shield of NJ,90838,FL,118.45,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Independence Blue Cross PA,90838,FL,93.36,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Anthem BCBS Indiana,90838,FL,86.22,2026-06-23,Add-on psychotherapy 60 min with E/M
+Headway,Blue Cross Blue Shield of Minnesota,99214,MN,149.86,2026-03-30,Est patient E/M moderate complexity
+Headway,BCBS Minnesota Medicaid,99214,MN,81.82,2026-03-30,Est patient E/M moderate complexity
+Headway,BCBS Minnesota Medicare Advantage,99214,MN,91.31,2026-03-30,Est patient E/M moderate complexity
+Headway,Blue Cross Blue Shield of Minnesota,99215,MN,210.76,2026-03-30,Est patient E/M high complexity
+Headway,BCBS Minnesota Medicaid,99215,MN,114.85,2026-03-30,Est patient E/M high complexity
+Headway,BCBS Minnesota Medicare Advantage,99215,MN,128.09,2026-03-30,Est patient E/M high complexity
+Headway,Blue Cross Blue Shield of Minnesota,90833,MN,80.14,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,BCBS Minnesota Medicaid,90833,MN,49.56,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,BCBS Minnesota Medicare Advantage,90833,MN,51.08,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Blue Cross Blue Shield of Minnesota,90836,MN,102.18,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,BCBS Minnesota Medicaid,90836,MN,62.87,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,BCBS Minnesota Medicare Advantage,90836,MN,64.71,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Blue Cross Blue Shield of Minnesota,90838,MN,135.84,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,BCBS Minnesota Medicaid,90838,MN,83.22,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,BCBS Minnesota Medicare Advantage,90838,MN,85.75,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Blue Cross Blue Shield of Massachusetts,99214,WA,132.0,2026-03-30,Est patient E/M moderate complexity
+Headway,Horizon Blue Cross Blue Shield of NJ,99214,WA,125.55,2026-03-30,Est patient E/M moderate complexity
+Headway,Independence Blue Cross PA,99214,WA,99.98,2026-03-30,Est patient E/M moderate complexity
+Headway,Regence BlueShield of Washington,99214,WA,119.8,2026-03-30,Est patient E/M moderate complexity
+Headway,Premera Blue Cross Washington,99214,WA,92.0,2026-03-30,Est patient E/M moderate complexity
+Headway,Blue Cross Blue Shield of Massachusetts,99215,WA,185.0,2026-03-30,Est patient E/M high complexity
+Headway,Horizon Blue Cross Blue Shield of NJ,99215,WA,156.97,2026-03-30,Est patient E/M high complexity
+Headway,Independence Blue Cross PA,99215,WA,140.77,2026-03-30,Est patient E/M high complexity
+Headway,Regence BlueShield of Washington,99215,WA,160.52,2026-03-30,Est patient E/M high complexity
+Headway,Premera Blue Cross Washington,99215,WA,130.0,2026-03-30,Est patient E/M high complexity
+Headway,Blue Cross Blue Shield of Massachusetts,90833,WA,71.0,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Horizon Blue Cross Blue Shield of NJ,90833,WA,71.03,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Independence Blue Cross PA,90833,WA,58.5,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Regence BlueShield of Washington,90833,WA,77.13,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Premera Blue Cross Washington,90833,WA,68.0,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Blue Cross Blue Shield of Massachusetts,90836,WA,89.0,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Horizon Blue Cross Blue Shield of NJ,90836,WA,89.56,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Independence Blue Cross PA,90836,WA,70.39,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Regence BlueShield of Washington,90836,WA,97.49,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Premera Blue Cross Washington,90836,WA,87.0,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Blue Cross Blue Shield of Massachusetts,90838,WA,111.0,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Horizon Blue Cross Blue Shield of NJ,90838,WA,118.45,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Independence Blue Cross PA,90838,WA,93.36,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Regence BlueShield of Washington,90838,WA,128.81,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Premera Blue Cross Washington,90838,WA,115.0,2026-03-30,Add-on psychotherapy 60 min with E/M
+Headway,Premera Blue Cross Washington,99214,NH,104.9,2026-03-30,Est patient E/M moderate complexity
+Headway,Premera Blue Cross Washington,99215,NH,147.68,2026-03-30,Est patient E/M high complexity
+Headway,Premera Blue Cross Washington,90833,NH,58.85,2026-03-30,Add-on psychotherapy 30 min with E/M
+Headway,Premera Blue Cross Washington,90836,NH,74.39,2026-03-30,Add-on psychotherapy 45 min with E/M
+Headway,Premera Blue Cross Washington,90838,NH,98.63,2026-03-30,Add-on psychotherapy 60 min with E/M
+Alma,Anthem BCBS Maine,99214,ME,104.9,2026-03-31,Est patient E/M moderate complexity
+Alma,Anthem BCBS Maine,99215,ME,147.68,2026-03-31,Est patient E/M high complexity
+Alma,Anthem BCBS Maine,90833,ME,58.85,2026-03-31,Add-on psychotherapy 30 min with E/M
+Alma,Anthem BCBS Maine,90836,ME,74.39,2026-03-31,Add-on psychotherapy 45 min with E/M
+Alma,Anthem BCBS Maine,90838,ME,98.63,2026-03-31,Add-on psychotherapy 60 min with E/M
