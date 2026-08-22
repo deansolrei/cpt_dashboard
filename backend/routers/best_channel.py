@@ -59,6 +59,7 @@ CARRIER_MAP = {
     # silently resolving to Florida Blue instead of BCBS Michigan.
     "anthem bcbs california": "Anthem BCBS California",
     "anthem bcbs indiana": "Anthem BCBS Indiana",
+    "anthem blue cross and blue shield indiana": "Anthem BCBS Indiana",
     "anthem bcbs virginia": "Anthem BCBS Virginia",
     "anthem blue cross california": "Anthem Blue Cross California",
     "bcbs arizona": "BCBS Arizona",
@@ -68,6 +69,55 @@ CARRIER_MAP = {
     "bcbs montana": "BCBS Montana",
     "bcbs texas": "BCBS Texas",
     "blue shield of california": "Blue Shield of California",
+    # NEW (2026-08-22, round 4): Dean's comprehensive Alma/Headway ->
+    # Tebra naming cross-reference. Every one of these was tested against
+    # the live resolver first — 20 of them were silently landing on
+    # "Florida Blue" (falling through to the generic BCBS_BY_STATE
+    # fallback, same failure class as every prior round) or "not mapped"
+    # entirely, none were previously reachable. Two categories:
+    #   - spelled-out variants of states already established above
+    #     (Michigan, Hawaii, Montana, Texas, Indiana) -> same existing
+    #     canonical value, just a second way to reach it
+    #   - genuinely new states/payers with no prior entry at all (Ohio,
+    #     Georgia, Illinois, Nebraska, New Mexico, Tennessee, Providence
+    #     Health Plan, Regence Group Administrators)
+    # Three related entries Dean also flagged (Independence Blue Cross
+    # PA/Pennsylvania, Regence BlueShield of Washington, and the existing
+    # "regence group" catch-all) were NOT changed here — his info
+    # conflicts with the values already in use below, and getting this
+    # wrong silently breaks something that may currently work. Held for
+    # a live payer_name query before touching those three.
+    "anthem bcbs ohio": "Anthem BCBS Ohio",
+    "anthem blue cross and blue shield ohio": "Anthem BCBS Ohio",
+    "anthem bcbs georgia": "Anthem BCBS Georgia",
+    "anthem blue cross and blue shield of georgia": "Anthem BCBS Georgia",
+    "carefirst bluecross blueshield": "BCBS CareFirst",  # different word order than "bcbs carefirst" above, same target
+    "blue cross and blue shield of hawaii": "BCBS Hawaii",
+    "blue cross blue shield of michigan": "BCBS Michigan",
+    "blue cross and blue shield of montana": "BCBS Montana",
+    "blue cross and blue shield of texas": "BCBS Texas",
+    "bcbs illinois": "BCBS Illinois",
+    "blue cross and blue shield of illinois": "BCBS Illinois",
+    "bcbs nebraska": "BCBS Nebraska",
+    "blue cross and blue shield of nebraska": "BCBS Nebraska",
+    "bcbs new mexico": "BCBS New Mexico",
+    "blue cross and blue shield of new mexico": "BCBS New Mexico",
+    "bcbs tennessee": "BCBS Tennessee",
+    "bluecross blueshield of tennessee": "BCBS Tennessee",
+    # Deliberately its OWN canonical, never merged into plain "florida
+    # blue" below — Medicare Advantage plans carry a fundamentally
+    # different rate structure than commercial plans from the same
+    # underlying company. The longer key here correctly outranks the
+    # shorter "florida blue" prefix match for any input starting with
+    # this full phrase.
+    "florida blue medicare advantage": "Florida Blue Medicare Advantage",
+    "providence health plan": "Providence Health Plan",  # not BCBS-family, a standalone insurer, included on Dean's Headway list
+    # More specific than the existing "regence group" entry below (which
+    # this correctly outranks via longest-match-wins) — Regence Group
+    # Administrators is a real, distinct entity, not the same as the
+    # Oregon state plan that generic catch-all was approximating.
+    "regence group administrators": "Regence Group Administrators",
+    "rga": "Regence Group Administrators",
     "blue cross blue shield of arizona": "BCBS Arizona",
     "blue cross blue shield of massachusetts": "BCBS Massachusetts",
     "blue cross and blue shield of minnesota": "BCBS Minnesota",
@@ -75,7 +125,12 @@ CARRIER_MAP = {
     "wellmark": "Wellmark Iowa",
     "florida blue": "Florida Blue",
     "blue cross and blue shield of florida": "Florida Blue",
-    "independence blue cross": "Independence Blue Cross PA",
+    # FIXED (2026-08-22): confirmed against a live payer_name query — the
+    # database has "Independence Blue Cross Pennsylvania", not "PA" like
+    # this entry previously output. Real, silent bug: any Independence
+    # Blue Cross patient's rate lookup was searching for a payer_name that
+    # never matched any row, returning zero rates the whole time.
+    "independence blue cross": "Independence Blue Cross Pennsylvania",
     # NEW (2026-08-21): was falling through to the generic Blue Cross
     # guess, same failure class as the Anthem entries above.
     "horizon blue cross and blue shield of new jersey": "Horizon BCBS New Jersey",
@@ -88,8 +143,14 @@ CARRIER_MAP = {
     # "not mapped" — worse than a wrong guess, just silently no answer.
     "regence bluecross blueshield of oregon": "Regence BCBS Oregon",
     "regence bluecross": "Regence BCBS Oregon",
-    "regence blueshield of washington": "Regence Blue Shield Washington",
-    "regence blueshield": "Regence Blue Shield Washington",
+    # FIXED (2026-08-22): confirmed against a live payer_name query — the
+    # database has "Regence BlueShield Washington" (no "of", one word
+    # "BlueShield", no "BCBS"). Matches neither the prior value here
+    # ("Regence Blue Shield Washington", with a space) nor what was
+    # initially assumed ("Regence BCBS Washington") — the database's exact
+    # string is what the rate lookup has to match, so that's the one used.
+    "regence blueshield of washington": "Regence BlueShield Washington",
+    "regence blueshield": "Regence BlueShield Washington",
     "regence group": "Regence BCBS Oregon",
     "blue cross blue shield": None,
     "blue cross and blue shield": None,
@@ -123,10 +184,11 @@ BCBS_BY_STATE = {
     "MI": "BCBS Michigan",  # NEW (2026-08-21) — was missing entirely, defaulted to hardcoded "Blue Cross"
     "MN": "BCBS Minnesota", "MT": "BCBS Montana", "NE": "Blue Cross",  # MT now specific, not generic (2026-08-21)
     "NV": "Anthem BCBS Nevada", "NH": "Anthem BCBS New Hampshire",
-    "NM": "BCBS Massachusetts", "ND": "Blue Cross", "OR": "Regence BCBS Oregon",
+    "NM": "BCBS New Mexico",  # FIXED (2026-08-22) — was "BCBS Massachusetts", a stale placeholder from before "BCBS New Mexico" existed as its own canonical (added this round)
+    "ND": "Blue Cross", "OR": "Regence BCBS Oregon",
     "SD": "Blue Cross", "TX": "BCBS Texas",  # TX now specific, not generic (2026-08-21)
     "UT": "Blue Cross", "VT": "Blue Cross",
-    "WA": "Regence Blue Shield Washington", "WY": "Blue Cross",
+    "WA": "Regence BlueShield Washington", "WY": "Blue Cross",  # FIXED (2026-08-22) — matches confirmed live payer_name
 }
 
 # Map CRB provID to CPT Dashboard provider tag
