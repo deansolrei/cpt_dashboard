@@ -219,6 +219,18 @@ VALID_STATES = {
 CHANNEL_COMPARISON_SQL = """
 WITH
 direct_rates AS (
+    -- FIXED 2026-08-23: fee_schedule_lines has a real `state` column (added
+    -- by sql/26_fee_schedule_state.sql specifically for this reason — that
+    -- migration even tagged Regence Oregon's row `state = 'OR'` at the
+    -- time) with real semantics: NULL = applies to every state, a specific
+    -- value = applies only there. This inline copy of the query never
+    -- picked up that migration's fix — only the separate `v_channel_
+    -- comparison` SQL view did. Found via a real case: querying state=HI
+    -- surfaced Regence BCBS Oregon (a payer with no Hawaii data at all)
+    -- showing only a Medicare rate and "No Data" for best channel — the
+    -- exact signature of a payer whose OR-tagged direct contract leaked
+    -- into every other state's query. The tiebreak below (state-specific
+    -- row wins over a universal one) matches the view's own ordering.
     SELECT DISTINCT ON (p.payer_name, fsl.cpt_code)
         p.payer_name,
         fsl.cpt_code,
@@ -230,8 +242,10 @@ direct_rates AS (
     WHERE c.active = TRUE
       AND (c.end_date   IS NULL OR c.end_date   >= CURRENT_DATE)
       AND (fsl.end_date IS NULL OR fsl.end_date >= CURRENT_DATE)
+      AND (fsl.state IS NULL OR fsl.state = %(state)s)
     ORDER BY p.payer_name, fsl.cpt_code,
         CASE pe.entity_type WHEN 'NPI1' THEN 0 ELSE 1 END,
+        CASE WHEN fsl.state IS NOT NULL THEN 0 ELSE 1 END,
         fsl.allowed_amount DESC
 ),
 medicare AS (
@@ -266,6 +280,11 @@ all_combos AS (
       AND  ir.state = %(state)s
       AND  (%(provider_filter)s IS NULL OR ir.provider IS NULL OR ir.provider = %(provider_filter)s)
     UNION
+    -- FIXED 2026-08-23: same underlying issue as direct_rates above — this
+    -- branch builds the candidate (payer, cpt) list from the same table,
+    -- so it needs the identical NULL-or-matching-state treatment, not a
+    -- plain state filter (which would wrongly exclude legitimate
+    -- universal/NULL-state rates from every state's candidate list).
     SELECT DISTINCT p.payer_name, fsl.cpt_code
     FROM   fee_schedule_lines fsl
     JOIN   contracts c ON fsl.contract_id = c.contract_id
@@ -274,6 +293,7 @@ all_combos AS (
       AND (c.end_date   IS NULL OR c.end_date   >= CURRENT_DATE)
       AND (fsl.end_date IS NULL OR fsl.end_date >= CURRENT_DATE)
       AND  fsl.cpt_code IN (SELECT cpt_code FROM channel_cpts)
+      AND (fsl.state IS NULL OR fsl.state = %(state)s)
 ),
 headway AS (
     SELECT DISTINCT ON (ir.payer_name, ir.cpt_code)
