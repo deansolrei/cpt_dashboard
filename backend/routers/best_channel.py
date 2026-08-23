@@ -119,6 +119,16 @@ CARRIER_MAP = {
     "regence group administrators": "Regence Group Administrators",
     "rga": "Regence Group Administrators",
     "blue cross blue shield of arizona": "BCBS Arizona",
+    # FIXED (2026-08-23): the short form ("BCBS Massachusetts") had no entry
+    # of its own — only the long spelled-out form below did. Same failure
+    # class as the round-3 Michigan/Arizona/Hawaii fixes: fell through to
+    # the generic "bcbs" catch-all, resolved via the PATIENT's own state
+    # rather than the plan's real identity. Found via a real patient case —
+    # a genuine BCBS Massachusetts member living in Florida was silently
+    # resolving to Florida Blue instead, which also meant her Headway rate
+    # picked up Headway's own unrelated Florida Blue contract instead of
+    # her real Massachusetts rate.
+    "bcbs massachusetts": "BCBS Massachusetts",
     "blue cross blue shield of massachusetts": "BCBS Massachusetts",
     "blue cross and blue shield of minnesota": "BCBS Minnesota",
     "blue cross blue shield - wellmark": "Wellmark Iowa",
